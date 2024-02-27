@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  border-radius: 65% 35% 50% 50% / 41% 68% 32% 59%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-hours {
+  border-radius: 65% 35% 50% 50% / 41% 68% 32% 59%;
+}
