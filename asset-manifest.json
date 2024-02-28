@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Hitflora/static/css/main.9b9d1228.css",
-    "main.js": "/Hitflora/static/js/main.82068f4c.js",
+    "main.css": "/Hitflora/static/css/main.b3cb3536.css",
+    "main.js": "/Hitflora/static/js/main.cd75a010.js",
     "static/js/453.0bbec879.chunk.js": "/Hitflora/static/js/453.0bbec879.chunk.js",
     "static/media/ladn1.jpg": "/Hitflora/static/media/ladn1.2a050d8be10b9463f493.jpg",
     "static/media/water.jpg": "/Hitflora/static/media/water.a1c30af281777715695e.jpg",
@@ -21,12 +21,12 @@
     "static/media/location-38.svg": "/Hitflora/static/media/location-38.4ea850545a2ac136ee1370fc037bda31.svg",
     "static/media/fb.svg": "/Hitflora/static/media/fb.f7402bbd698dea9d6f517e3093746f50.svg",
     "index.html": "/Hitflora/index.html",
-    "main.9b9d1228.css.map": "/Hitflora/static/css/main.9b9d1228.css.map",
-    "main.82068f4c.js.map": "/Hitflora/static/js/main.82068f4c.js.map",
+    "main.b3cb3536.css.map": "/Hitflora/static/css/main.b3cb3536.css.map",
+    "main.cd75a010.js.map": "/Hitflora/static/js/main.cd75a010.js.map",
     "453.0bbec879.chunk.js.map": "/Hitflora/static/js/453.0bbec879.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b9d1228.css",
-    "static/js/main.82068f4c.js"
+    "static/css/main.b3cb3536.css",
+    "static/js/main.cd75a010.js"
   ]
 }
