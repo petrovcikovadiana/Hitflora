@@ -55,8 +55,8 @@ const Navbar = () => {
 
   return (
     // nav desktop
-    <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 backdrop-blur-sm mx-auto  md:max-w-[600px] xl:max-w-[2560px]">
-      <div className=" mx-auto px-4 ">
+    <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40  mx-auto  md:max-w-[600px] xl:max-w-[2560px]">
+      <div className=" mx-auto px-2">
         <div className="flex justify-between md:justify-center items-center h-16 space-x-20  ">
           <div className="flex items-center">
             {" "}

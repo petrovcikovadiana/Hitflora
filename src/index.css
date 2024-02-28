@@ -10,3 +10,14 @@
 .container-hours {
   border-radius: 65% 35% 50% 50% / 41% 68% 32% 59%;
 }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
