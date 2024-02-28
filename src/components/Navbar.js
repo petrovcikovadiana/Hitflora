@@ -55,20 +55,24 @@ const Navbar = () => {
 
   return (
     // nav desktop
-    <nav className="md:bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 backdrop-blur-sm ">
+    <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 backdrop-blur-sm mx-auto  md:max-w-[600px] xl:max-w-[2560px]">
       <div className=" mx-auto px-4 ">
         <div className="flex justify-between md:justify-center items-center h-16 space-x-20  ">
-          <div className="flex space-x-2 items-center">
+          <div className="flex items-center">
+            {" "}
             {/* Logo */}
-            <h3>HiT</h3>
+            <h3 className="pr-2">HiT</h3>
             <Link to="/">
               {/* TEN STROM JE TURECKÁ LÍSKA */}
-              <img src={logo} alt="logo" className="text-white h-8 w-8" />
+              <img src={logo} alt="logo" className="text-white h-8 w-8 " />
               {/* Use appropriate styling for your logo */}
             </Link>
-            <h3 className="text-logoRed">FLORA s.r.o.</h3>
+            <h3 className="text-logoRed pl-2">FLORA s.r.o.</h3>
+          </div>
+
+          <div className="flex items-center">
             {/* nav list desktop*/}
-            <ul className="hidden md:flex space-x-6 px-56">
+            <ul className="hidden md:flex space-x-6 px-44">
               <li>
                 <Link to="/">
                   <a href="#home" className="text-white hover:text-accent">

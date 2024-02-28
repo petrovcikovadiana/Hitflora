@@ -10,7 +10,6 @@ import planty from "../assets/planty.svg";
 import forest from "../assets/forest.svg";
 import location from "../assets/location-38.svg";
 import mail from "../assets/mail.svg";
-import phone from "../assets/phone.svg";
 import facebook from "../assets/fb.svg";
 
 import dreviny from "../assets/sem.jpg";
@@ -29,9 +28,9 @@ function Sortiment() {
       <Navbar /> {/* hero start */}
       <div></div>
       <div className="w-full h-44">
-        <div className="flex flex-col px-64 text-start w-full mt-20 ">
+        <div className="flex flex-col px-64 md:text-start w-full mt-20 items-center md:items-start text-center">
           <h1 className="text-black text-2xl font-bold uppercase opacity-100">
-            Prodejna{" "}
+            Prodejna
           </h1>
           <h1 className="text-headerGreen text-2xl font-bold uppercase opacity-100 ">
             Náš sortiment
