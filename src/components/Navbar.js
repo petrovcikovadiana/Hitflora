@@ -2,41 +2,56 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../assets/hitflora (1).png";
-import { BsTelephone } from "react-icons/bs";
+import { LiaPhoneVolumeSolid, LiaPhoneSlashSolid } from "react-icons/lia";
 
 const Navbar = () => {
   const [textColor, setTextColor] = useState("");
   const [fillColor, setFillColor] = useState("");
+  const [phoneIcon, setPhoneIcon] = useState(
+    <LiaPhoneVolumeSolid className="w-5 h-5" />
+  );
+
   useEffect(() => {
-    // Function to determine and set fill color based on the current time
-    const setFillColorBasedOnTime = () => {
+    // Function to determine and set fill color and icon based on the current time
+    const setColorAndIconBasedOnTime = () => {
       const currentHour = new Date().getHours();
       if (currentHour >= 7 && currentHour < 16) {
-        setFillColor("green");
+        setFillColor("#90CA3E");
+        setPhoneIcon(
+          <LiaPhoneVolumeSolid
+            className="w-5 h-5"
+            style={{ fill: fillColor }}
+          />
+        );
       } else {
-        setFillColor("red");
+        setFillColor("#CC0000");
+        setPhoneIcon(
+          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: fillColor }} />
+        );
       }
     };
 
-    // Initial call to set fill color
-    setFillColorBasedOnTime();
+    // Initial call to set fill color and icon
+    setColorAndIconBasedOnTime();
 
-    // Set up an interval to update the fill color every minute (or adjust as needed)
-    const intervalId = setInterval(setFillColorBasedOnTime, 60000);
+    // Set up an interval to update the fill color and icon every minute (or adjust as needed)
+    const intervalId = setInterval(setColorAndIconBasedOnTime, 60000);
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
-  }, []);
+  }, [fillColor]);
+
   useEffect(() => {
     // Function to determine and set text color based on the current time
     const setTextColorBasedOnTime = () => {
       const currentHour = new Date().getHours();
       if (currentHour >= 7 && currentHour < 16) {
-        setTextColor("green");
+        setTextColor("#90CA3E");
       } else {
-        setTextColor("red");
+        setTextColor("#CC0000");
       }
     };
+
     // Initial call to set text color
     setTextColorBasedOnTime();
 
@@ -61,13 +76,13 @@ const Navbar = () => {
           <div className="flex items-center">
             {" "}
             {/* Logo */}
-            <h3 className="pr-2">HiT</h3>
+            <h3 className="pr-2 font-bold">HiT</h3>
             <Link to="/">
               {/* TEN STROM JE TURECKÁ LÍSKA */}
               <img src={logo} alt="logo" className="text-white h-8 w-8 " />
               {/* Use appropriate styling for your logo */}
             </Link>
-            <h3 className="text-logoRed pl-2">FLORA s.r.o.</h3>
+            <h3 className="text-logoRed pl-2 font-bold">FLORA s.r.o.</h3>
           </div>
 
           <div className="flex items-center">
@@ -113,7 +128,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             {/* Phone number with icon */}
             <div className="flex items-center gap-2">
-              <BsTelephone style={{ fill: fillColor }} />
+              {phoneIcon}
               <span style={{ color: textColor }}>+420 775 102 189</span>
             </div>
           </div>
@@ -133,9 +148,9 @@ const Navbar = () => {
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/10	backdrop-blur-sm ">
+        <div className="md:hidden  ">
           {/* hamburger list */}
-          <ul className="flex flex-col space-y-5 text-white items-center h-screen">
+          <ul className="flex flex-col space-y-5 pt-5 text-white items-center h-screen">
             <li>
               <a href="#home">Domů</a>
             </li>

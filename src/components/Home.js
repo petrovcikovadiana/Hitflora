@@ -9,7 +9,6 @@ import forest from "../assets/forest.svg";
 import location from "../assets/location-38.svg";
 import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
-import facebook from "../assets/fb.svg";
 import logo from "../assets/hitflora (1).png";
 
 import dreviny from "../assets/sem.jpg";
@@ -40,13 +39,13 @@ function Home() {
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-heroGreen opacity-75"></div>
-        <div className="relative z-10 top-1/3 left-1/2 transform -translate-x-1/2 text-center md:w-96 py-10 md:py-0 px-4   ">
+        <div className="relative z-10 top-1/3 left-1/2 transform -translate-x-1/2 text-center  py-10 md:py-0 px-4   ">
           <h1 className="text-shadeWhite text-3xl">
             Zahradnictví Děčín |{" "}
             <span className="text-headerGreen opacity-100">Křešice</span>
           </h1>
           <hr class="h-px w-56 my-8 bg-lineGrey border-0 mx-auto opacity-100" />
-          <p className="text-shadeWhite tracking-widest text-sm font-thin opacity-100">
+          <p className="text-shadeWhite tracking-widest text-sm font-thin opacity-100 w-96">
             Na našich stránkách najdete nejdůležitější informace o našem
             zahradnictví, naší práci a naší nabídce.
           </p>
@@ -71,16 +70,18 @@ function Home() {
             {/* text with dots start*/}
             <div className="flex flex-row gap-3 items-center pb-2">
               <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-              <p className="tracking-wider">Jaro 2024 v zahradnictví</p>
+              <p className="tracking-wider text-sm">Jaro 2024 v zahradnictví</p>
             </div>
             <div className="flex flex-row gap-3 items-center pb-2">
               <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-              <p className="tracking-wider">Nová jarní otevírací doba</p>
+              <p className="tracking-wider text-sm">
+                Nová jarní otevírací doba
+              </p>
             </div>{" "}
             <div className="flex flex-row gap-3 items-center ">
               <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-              <p className="tracking-wider">
-                Sledujte nás také na Facebooku a Instagramu
+              <p className="tracking-wider text-sm">
+                Sledujte nás na Facebooku a Instagramu
               </p>
             </div>
             {/* text with dots end*/}
@@ -131,11 +132,11 @@ function Home() {
         </div>
         {/* cards start */}
         <div className="flex flex-wrap gap-5 py-10 md:px-36 mx-auto items-center justify-center">
-          <div className="w-72 h-56  relative ">
+          <div className="md:w-72 md:h-56 w-48 h-40  relative ">
             <img
               src={dreviny}
               alt="dřeviny"
-              className="w-72 h-56 rounded-2xl"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
@@ -145,8 +146,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="w-72 h-56 relative">
-            <img src={sale} alt="sortiment" className="w-72 h-56 rounded-2xl" />
+          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+            <img
+              src={sale}
+              alt="sortiment"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+            />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
                 <p className=" text-white text-sm  text-center font-medium">
@@ -155,11 +160,11 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="w-72 h-56 relative">
+          <div className="md:w-72 md:h-56 w-48 h-40 relative">
             <img
               src={decor}
               alt="sortiment"
-              className="w-72 h-56 rounded-2xl"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
@@ -169,8 +174,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="w-72 h-56 relative">
-            <img src={flower} alt="flowers" className="w-72 h-56 rounded-2xl" />
+          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+            <img
+              src={flower}
+              alt="flowers"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+            />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
                 <p className=" text-white text-sm  text-center font-medium">
@@ -179,8 +188,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="w-72 h-56 relative">
-            <img src={water} alt="projekty" className="w-72 h-56 rounded-2xl" />
+          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+            <img
+              src={water}
+              alt="projekty"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+            />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
                 <p className=" text-white text-sm  text-center font-medium">
@@ -189,11 +202,11 @@ function Home() {
               </div>
             </div>
           </div>{" "}
-          <div className="w-72 h-56 relative">
+          <div className="md:w-72 md:h-56 w-48 h-40 relative">
             <img
               src={onion}
               alt="realizace"
-              className="w-72 h-56 rounded-2xl"
+              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
@@ -234,7 +247,7 @@ function Home() {
       </div>
       {/* two images in row end*/}
       {/* services and sale start */}
-      <div className="flex md:flex-row flex-col pt-16 max-w-[1440px] mx-auto items-center md:items-start md:text-start text-center">
+      <div className="flex md:flex-row flex-col pt-16 max-w-[1440px] mx-auto items-center md:items-start md:text-start text-center z-10">
         {/* left container */}
         <div className="flex flex-col md:pl-64 md:ml-3 ">
           <h1 className="text-bold text-xl uppercase font-bold">naše služby</h1>
@@ -303,11 +316,71 @@ function Home() {
         </div>
       </div>
       {/* opening hours end */}
+      {/* contact form start */}
+      <div className="">
+        <h1 className="text-headerGreen text-xl flex items-center justify-center mx-auto">
+          Kontaktní formulář
+        </h1>
+        <form className="max-w-md mx-auto my-10 px-16 md:px-0">
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Jméno
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              className="mt-1 p-2 w-full border shadow-sm  focus:outline-none sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              className="mt-1 p-2 w-full border shadow-sm block focus:outline-none sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Zpráva
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              required
+              className="mt-1 p-2 w-full border shadow-sm  focus:outline-none block sm:text-sm border-gray-300 rounded-md"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-headerGreen hover:bg-textGrey"
+          >
+            Odeslat
+          </button>
+        </form>
+      </div>
+      {/* contact form end */}
       {/* footer start */}
       <div className="w-full md:h-44 bg-circleGreen md:px-44 text-sm mx-auto text-center">
         <div className="flex md:flex-row flex-col md:gap-12 gap-4 items-center justify-center py-8 ">
           {/* Logo */}
-          <div className="flex flex-row gap-2 items-center justify-center  mx-auto  ">
+          <div className="flex flex-row gap-2 items-center justify-center   ">
             {" "}
             <h3>HiT</h3>
             <Link to="/">
@@ -316,7 +389,7 @@ function Home() {
             </Link>
             <h3 className="text-logoRed">FLORA s.r.o.</h3>{" "}
           </div>
-          <div className="text-sm flex flex-row gap-3 items-center justify-center  text-center ">
+          <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
             <img src={location} alt="location" className="w-7 h-7" />
             <div className="">
               {" "}
@@ -326,7 +399,7 @@ function Home() {
               <p>Křešice</p>
             </div>
           </div>
-          <div className="text-sm flex flex-row gap-5 items-center justify-center text-center ">
+          <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center ">
             <img src={mail} alt="mail" className="w-6 h-6" />
             <div>
               {" "}
@@ -337,7 +410,7 @@ function Home() {
               <p>tesarova@hitflora.cz</p>
             </div>
           </div>{" "}
-          <div className="text-sm flex flex-row gap-5 items-center justify-center text-center">
+          <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center">
             <img src={phone} alt="phone" className="w-6 h-6" />
             <div>
               {" "}

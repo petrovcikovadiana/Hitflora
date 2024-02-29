@@ -1,35 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 
 const CookieBanner = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(true);
 
+  useEffect(() => {
+    const cookieConsent = getCookie("cookieConsent");
+    if (cookieConsent === "true") {
+      setShowCookieBanner(false);
+    }
+  }, []);
+
+  const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+  };
+
   const handleAccept = () => {
-    // Simulace uložení informace o souhlasu do cookie
     document.cookie =
       "cookieConsent=true; expires=Thu, 01 Jan 2030 00:00:00 UTC; path=/";
-
-    // Zobrazení zprávy v konzoli
     console.log("Uživatel udělil souhlas s používáním cookies.");
-
-    // Zobrazení hodnoty cookie v konzoli pro vývojové účely
-    console.log("Cookie hodnota:", document.cookie);
-
-    // Skrytí cookie lišty
     setShowCookieBanner(false);
   };
 
   const handleDecline = () => {
-    // Zobrazení zprávy v konzoli
     console.log("Uživatel odmítl používání cookies.");
-
-    // Skrytí cookie lišty
     setShowCookieBanner(false);
   };
 
   return (
     showCookieBanner && (
-      <div className="fixed  bottom-0 left-0 right-0 p-4 bg-black/80 text-white ">
+      <div className="fixed  bottom-0 left-0 right-0 p-4 bg-black/80 text-white z-50">
         <p className="mb-2 text-center text-sm">
           Tato stránka využívá cookies. Kliknutím na tlačítko "Souhlasím"
           vyjadřujete souhlas s jejich používáním.
