@@ -119,9 +119,11 @@ const Navbar = () => {
               </li>
               <li>
                 {" "}
-                <a href="#contact" className="text-white hover:text-accent">
-                  Kontakt
-                </a>
+                <Link to="/kontakt">
+                  <a href="#contact" className="text-white hover:text-accent">
+                    Kontakt
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -169,7 +171,9 @@ const Navbar = () => {
               <a href="#work">O nás</a>
             </li>
             <li>
-              <a href="#contact">Kontakt</a>
+              <Link to="/kontakt">
+                <a href="#contact">Kontakt</a>
+              </Link>
             </li>
           </ul>
         </div>
