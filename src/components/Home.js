@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { SlSocialFacebook } from "react-icons/sl";
-import { SlSocialInstagram } from "react-icons/sl";
+import { SlSocialInstagram, SlLocationPin } from "react-icons/sl";
+import { GoMail } from "react-icons/go";
+import { BsTelephone } from "react-icons/bs";
 
 import main from "../assets/sklenik.jpg";
 import planty from "../assets/planty.svg";
@@ -330,7 +332,7 @@ function Home() {
             <h3 className="text-logoRed">FLORA s.r.o.</h3>{" "}
           </div>
           <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
-            <img src={location} alt="location" className="w-7 h-7" />
+            <SlLocationPin className="w-7 h-7 text-headerGreen" />
             <div className="">
               {" "}
               <p>HiT FLORA s.r.o.</p>
@@ -340,7 +342,7 @@ function Home() {
             </div>
           </div>
           <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center ">
-            <img src={mail} alt="mail" className="w-6 h-6" />
+            <GoMail className="w-7 h-7 text-headerGreen" />
             <div>
               {" "}
               <p>Ing. Břetislav Hons</p>
@@ -351,7 +353,7 @@ function Home() {
             </div>
           </div>{" "}
           <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center">
-            <img src={phone} alt="phone" className="w-6 h-6" />
+            <BsTelephone className="w-7 h-7 text-headerGreen" />
             <div>
               {" "}
               <p className="font-bold text-headerGreen">Mobil</p>

@@ -1,10 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function Kontakt() {
   return (
     <div>
-      {" "}
-      {/* contact form start */}
+      <Navbar /> {/* contact form start */}
       <div className="">
         <h1 className="text-headerGreen text-xl flex items-center justify-center mx-auto">
           Kontaktní formulář
