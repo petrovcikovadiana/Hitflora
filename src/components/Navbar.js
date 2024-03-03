@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "../assets/hitflora (1).png";
+import logo from "assets/hitflora-(1).png";
 import { LiaPhoneVolumeSolid, LiaPhoneSlashSolid } from "react-icons/lia";
 
 const Navbar = () => {

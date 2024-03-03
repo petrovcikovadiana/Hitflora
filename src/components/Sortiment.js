@@ -1,20 +1,20 @@
 import React from "react";
 
-import location from "../assets/location-38.svg";
-import mail from "../assets/mail.svg";
+import location from "assets/location-38.svg";
+import mail from "assets/mail.svg";
 
-import dreviny from "../assets/sem.jpg";
-import sale from "../assets/sale.jpg";
-import water from "../assets/water.jpg";
-import flower from "../assets/fl.jpeg";
-import onion from "../assets/onion.jpg";
-import decor from "../assets/ladn1.jpg";
+import dreviny from "assets/sem.jpg";
+import sale from "assets/sale.jpg";
+import water from "assets/water.jpg";
+import flower from "assets/fl.jpeg";
+import onion from "assets/onion.jpg";
+import decor from "assets/ladn1.jpg";
 
 import Navbar from "./Navbar";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
-import phone from "../assets/phone.svg";
-import logo from "../assets/hitflora (1).png";
+import phone from "assets/phone.svg";
+import logo from "assets/hitflora-(1).png";
 import { Link } from "react-router-dom";
 
 function Sortiment() {
@@ -51,7 +51,7 @@ function Sortiment() {
         </div>
         <div className="card">
           <img
-            src="/assets/sale.jpg"
+            src={sale}
             alt="sale"
             className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
