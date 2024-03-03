@@ -6,7 +6,11 @@ import { GoMail } from "react-icons/go";
 import { BsTelephone } from "react-icons/bs";
 
 import main from "../assets/sklenik.jpg";
-import planty from "../assets/planty.svg";
+import sprays from "../assets/sprays.svg";
+import fertilizers from "../assets/fertilizers.svg";
+import substrates from "../assets/substrates.svg";
+import planters from "../assets/planters.svg";
+import plants from "../assets/plants.svg";
 import forest from "../assets/forest.svg";
 import location from "../assets/location-38.svg";
 import mail from "../assets/mail.svg";
@@ -96,25 +100,25 @@ function Home() {
       </div>
       {/* content end */}
       {/* circles start */}
-      <div className="bg-lightYellow flex md:flex-row flex-wrap gap-10 mx-auto items-center justify-center pb-20 ">
-        <div className="flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center">
-          <img src={planty} alt="plant" className="w-14 h-14 " />
+      <div className="bg-lightYellow flex md:flex-row flex-wrap gap-10 mx-auto items-center justify-center pb-20 lg:pt-5 ">
+        <div className="circle">
+          <img src={plants} alt="plant" className="w-14 h-14 " />
           <h3 className="text-darkGreen">Rostliny</h3>
         </div>
-        <div className="flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center">
-          <img src={planty} alt="plant" className="w-14 h-14 " />
+        <div className="circle">
+          <img src={substrates} alt="plant" className="w-14 h-14 " />
           <h3 className="text-darkGreen">Substráty</h3>
         </div>{" "}
-        <div className="flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center">
-          <img src={planty} alt="plant" className="w-14 h-14 " />
+        <div className="circle">
+          <img src={fertilizers} alt="plant" className="w-14 h-14 " />
           <h3 className="text-darkGreen">Hnojiva</h3>
         </div>{" "}
-        <div className="flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center">
-          <img src={planty} alt="plant" className="w-14 h-14 " />
+        <div className="circle">
+          <img src={sprays} alt="plant" className="w-14 h-14 " />
           <h3 className="text-darkGreen">Postřiky</h3>
         </div>{" "}
-        <div className="flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center">
-          <img src={planty} alt="plant" className="w-14 h-14 " />
+        <div className="circle">
+          <img src={planters} alt="plant" className="w-14 h-14 " />
           <h3 className="text-darkGreen">Truhlíky</h3>
         </div>
       </div>
@@ -124,94 +128,94 @@ function Home() {
       {/* services start */}
       <div className=" w-full h-full bg-white max-w-[1440px] mx-auto">
         {/* title */}
-        <div className="flex flex-col md:px-64 mx-3 pt-16 ">
+        <div className="flex flex-col md:px-64 mx-3 pt-6 ">
           <h1 className="font-bold text-xl uppercase md:text-start text-center">
             V našem zahradnictví{" "}
             <span className="text-headerGreen">nabízíme</span>
           </h1>
           {/* horizontal rule */}
-          <hr class="h-px w-44 my-8 bg-lineGrey border-0 mx-auto md:mx-0" />
+          <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
         {/* cards start */}
-        <div className="flex flex-wrap gap-5 py-10 md:px-36 mx-auto items-center justify-center">
-          <div className="md:w-72 md:h-56 w-48 h-40  relative ">
+        <div className="flex flex-wrap gap-5 py-5 md:px-36 mx-auto items-center justify-center">
+          <div className="card">
             <img
               src={dreviny}
               alt="dřeviny"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Vlastní produkce dřevin
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+          <div className="card">
             <img
               src={sale}
               alt="sortiment"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Široký sortiment rostlin
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+          <div className="card">
             <img
               src={decor}
               alt="sortiment"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className=" object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Doručení zboží
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+          <div className="card">
             <img
               src={flower}
               alt="flowers"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Údržba zeleně
                 </p>
               </div>
             </div>
           </div>
-          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+          <div className="card">
             <img
               src={water}
               alt="projekty"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Projekty zahrad{" "}
                 </p>
               </div>
             </div>
           </div>{" "}
-          <div className="md:w-72 md:h-56 w-48 h-40 relative">
+          <div className="card">
             <img
               src={onion}
               alt="realizace"
-              className="md:w-72 md:h-56 w-48 h-40 rounded-2xl"
+              className="object-covermd:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+              <div className="greenBox">
                 <p className=" text-white text-sm  text-center font-medium">
                   Realizace sadových úprav{" "}
                 </p>
@@ -222,15 +226,15 @@ function Home() {
         {/* cards end */}
       </div>
       {/* services end */}{" "}
-      <div className="flex md:flex-row flex-col md:gap-44 py-16 max-w-[1440px] mx-auto">
-        <div className="flex flex-col md:ml-4 md:pl-64 items-center md:items-start">
+      <div className="flex md:flex-row flex-col md:gap-44 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
+        <div className="flex flex-col md:ml-4  items-center md:items-start">
           <h1 className="text-bold text-xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
           </h1>
           {/* horizontal rule */}
-          <hr class="h-px w-44 my-8 bg-lineGrey border-0 " />
+          <hr class="h-px w-20 md:w-44 my-4 bg-lineGrey border-0 " />
         </div>
-        <div className="md:w-1/3">
+        <div className="md:w-1/2">
           <p className="text-textGrey  text-center md:text-start px-4 md:px-0">
             Firma se nachází v Děčíně, části zvané Křešice. Zahradnictví se
             rozkládá na ploše cca 3 ha, z toho 1 ha zabírají skleníky,
@@ -239,29 +243,33 @@ function Home() {
         </div>
       </div>
       {/* two images in row start*/}
-      <div className="md:flex hidden flex-row gap-20 px-64 mx-3 max-w-[1440px] mx-auto">
+      <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
           src={sklenik}
           alt="sklenik"
-          className="rounded-2xl  w-[280px] h-[350px]"
+          className="rounded-2xl  lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
         />
-        <img src={man} alt="man" className="rounded-2xl w-[654px] h-[350px]" />
+        <img
+          src={man}
+          alt="man"
+          className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
+        />
       </div>
       {/* two images in row end*/}
       {/* services and sale start */}
-      <div className="flex md:flex-row flex-col pt-16 max-w-[1440px] mx-auto items-center md:items-start md:text-start text-center z-10">
+      <div className="flex md:flex-row flex-col pt-10  items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         {/* left container */}
-        <div className="flex flex-col md:pl-64 md:ml-3 ">
+        <div className="flex flex-col lg:pl-0 md:ml-3 ">
           <h1 className="text-bold text-xl uppercase font-bold">naše služby</h1>
           <h1 className="text-bold text-xl uppercase font-bold text-headerGreen">
             prodej
           </h1>
           <h1 className="text-bold text-xl uppercase font-bold">a realizace</h1>
           {/* horizontal rule */}
-          <hr class="h-px w-44 my-8 bg-lineGrey border-0 " />
+          <hr class="h-px w-44 my-4 bg-lineGrey border-0 " />
         </div>
         {/* right container */}
-        <div className="md:pl-40 px-4 ">
+        <div className="lg:pl-40 md:pl-16 px-4 ">
           <div className="flex flex-row gap-3 pb-2 ">
             <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
             <p className="tracking-wider text-sm">
@@ -324,12 +332,12 @@ function Home() {
           {/* Logo */}
           <div className="flex flex-row gap-2 items-center justify-center   ">
             {" "}
-            <h3>HiT</h3>
+            <h3 className="font-bold">HiT</h3>
             <Link to="/">
               <img src={logo} alt="logo" className="text-white h-8 w-8" />
               {/* Use appropriate styling for your logo */}
             </Link>
-            <h3 className="text-logoRed">FLORA s.r.o.</h3>{" "}
+            <h3 className="text-logoRed font-bold">FLORA s.r.o.</h3>{" "}
           </div>
           <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
             <SlLocationPin className="w-7 h-7 text-headerGreen" />

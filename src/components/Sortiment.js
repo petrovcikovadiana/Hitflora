@@ -35,84 +35,84 @@ function Sortiment() {
       {/* hero end */}
       {/* cards start */}
       <div className="flex flex-wrap gap-5 py-10 md:px-36 mx-auto items-center justify-center max-w-[1440px]">
-        <div className="md:w-72 md:h-56 w-52 h-44  relative ">
+        <div className="card">
           <img
             src={dreviny}
             alt="dřeviny"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Vlastní produkce dřevin
               </p>
             </div>
           </div>
         </div>
-        <div className="md:w-72 md:h-56 w-52 h-44 relative">
+        <div className="card">
           <img
-            src={sale}
-            alt="sortiment"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            src="/assets/sale.jpg"
+            alt="sale"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Široký sortiment rostlin
               </p>
             </div>
           </div>
         </div>
-        <div className="md:w-72 md:h-56 w-52 h-44 relative">
+        <div className="card">
           <img
             src={decor}
             alt="sortiment"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Doručení zboží
               </p>
             </div>
           </div>
         </div>
-        <div className="md:w-72 md:h-56 w-52 h-44 relative">
+        <div className="card">
           <img
             src={flower}
             alt="flowers"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Údržba zeleně
               </p>
             </div>
           </div>
         </div>
-        <div className="md:w-72 md:h-56 w-52 h-44 relative">
+        <div className="card">
           <img
             src={water}
             alt="projekty"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Projekty zahrad{" "}
               </p>
             </div>
           </div>
         </div>{" "}
-        <div className="md:w-72 md:h-56 w-52 h-44 relative">
+        <div className="card">
           <img
             src={onion}
             alt="realizace"
-            className="md:w-72 md:h-56 w-52 h-44 rounded-2xl"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
-            <div className="bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-2xl flex items-center justify-center">
+            <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
                 Realizace sadových úprav{" "}
               </p>
