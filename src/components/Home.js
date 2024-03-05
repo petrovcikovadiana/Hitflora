@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialInstagram, SlLocationPin } from "react-icons/sl";
@@ -28,8 +28,32 @@ import sklenik from "assets/sklenik.jpg";
 import kosik from "assets/kosik.jpg";
 import Navbar from "./Navbar";
 import CookieBanner from "./CookieBanner";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 function Home() {
+  const [open, setOpen] = useState(false);
+
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
+  // circles
+  const categories = [
+    { id: 1, img: plants, title: "Rostliny", clickAction: toggleModal },
+    { id: 2, img: fertilizers, title: "Substráty" },
+    { id: 3, img: substrates, title: "Hnojiva" },
+    { id: 4, img: sprays, title: "Postřiky" },
+    { id: 5, img: planters, title: "Truhlíky" },
+  ];
+
   return (
     <div>
       <Navbar />
@@ -59,7 +83,7 @@ function Home() {
       </div>
       {/* hero end */}
       {/* content start */}
-      <div className="bg-lightYellow w-full md:h-96 flex items-center justify-center ">
+      <div className="bg-lightYellow w-full md:h-96 flex items-center justify-center">
         <div className="flex md:flex-row gap-32 md:px-44 mx-auto max-w-[1440px]">
           {/* left container */}
           <div className="flex flex-col md:w-1/2 px-5 justify-center mx-auto items-center md:items-start py-10 md:py-0">
@@ -100,27 +124,64 @@ function Home() {
       </div>
       {/* content end */}
       {/* circles start */}
-      <div className="bg-lightYellow flex md:flex-row flex-wrap gap-10 mx-auto items-center justify-center pb-20 lg:pt-5 ">
-        <div className="circle">
-          <img src={plants} alt="plant" className="w-14 h-14 " />
-          <h3 className="text-darkGreen">Rostliny</h3>
-        </div>
-        <div className="circle">
-          <img src={substrates} alt="plant" className="w-14 h-14 " />
-          <h3 className="text-darkGreen">Substráty</h3>
-        </div>{" "}
-        <div className="circle">
-          <img src={fertilizers} alt="plant" className="w-14 h-14 " />
-          <h3 className="text-darkGreen">Hnojiva</h3>
-        </div>{" "}
-        <div className="circle">
-          <img src={sprays} alt="plant" className="w-14 h-14 " />
-          <h3 className="text-darkGreen">Postřiky</h3>
-        </div>{" "}
-        <div className="circle">
-          <img src={planters} alt="plant" className="w-14 h-14 " />
-          <h3 className="text-darkGreen">Truhlíky</h3>
-        </div>
+      <div className="bg-lightYellow flex md:flex-row flex-wrap gap-10 mx-auto items-center justify-center pb-20 lg:pt-5">
+        {categories.map((category) => (
+          <div key={category.id} className="circle">
+            <img
+              src={category.img}
+              alt={category.title}
+              className={`w-14 h-14 ${
+                category.clickAction ? "cursor-pointer" : ""
+              }`}
+              onClick={category.clickAction ? category.clickAction : null}
+            />
+            <h3 className="text-darkGreen">{category.title}</h3>
+          </div>
+        ))}
+      </div>
+      <div className="md:flex hidden text-lightWhite">
+        {modal && (
+          <div className="modal">
+            <div onClick={toggleModal} className="overlay"></div>
+            <div className="modal-content  mx-auto text-center ">
+              <h2 className="text-center uppercase text-xl font-bold text-gray-900">
+                Rostliny{" "}
+              </h2>
+              <h2 className="uppercase font-bold text-headerGreen">
+                Náš sortiment
+              </h2>
+              <hr class="h-px w-56 my-8 bg-lineGrey border-0 mx-auto opacity-100" />
+              {/* content */}
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <img src={plants} alt="plants" className="w-10 h-10 " />
+                <p className=" items-center text-gray-900 text-base justify-center text-center ">
+                  trvalky
+                </p>
+              </div>
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <img src={plants} alt="plants" className="w-10 h-10 " />
+                <p className=" items-center text-gray-900 text-base justify-center text-center ">
+                  letničky
+                </p>
+              </div>
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <img src={plants} alt="plants" className="w-10 h-10 " />
+                <p className=" items-center text-gray-900 text-base justify-center text-center ">
+                  okrasné trávy
+                </p>
+              </div>{" "}
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <img src={plants} alt="plants" className="w-10 h-10 " />
+                <p className=" items-center text-gray-900 text-base justify-center text-center ">
+                  vinná réva
+                </p>
+              </div>
+              <button className="close-modal" onClick={toggleModal}>
+                <AiOutlineCloseCircle />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
       {/* circles end */}
       {/* carousel start */}
@@ -212,7 +273,7 @@ function Home() {
             <img
               src={onion}
               alt="realizace"
-              className="object-covermd:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
