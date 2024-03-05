@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import location from "assets/location-38.svg";
 import mail from "assets/mail.svg";
@@ -39,12 +39,13 @@ function Sortiment() {
           <img
             src={dreviny}
             alt="dřeviny"
-            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
+            loading="lazy"
+            className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
           />
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
-                Vlastní produkce dřevin
+                Rostliny
               </p>
             </div>
           </div>
@@ -58,7 +59,7 @@ function Sortiment() {
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
-                Široký sortiment rostlin
+                Substráty{" "}
               </p>
             </div>
           </div>
@@ -72,7 +73,7 @@ function Sortiment() {
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
-                Doručení zboží
+                Hnojiva
               </p>
             </div>
           </div>
@@ -86,7 +87,7 @@ function Sortiment() {
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
-                Údržba zeleně
+                Postřiky{" "}
               </p>
             </div>
           </div>
@@ -100,7 +101,7 @@ function Sortiment() {
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
               <p className=" text-white text-sm  text-center font-medium">
-                Projekty zahrad{" "}
+                Truhlíky{" "}
               </p>
             </div>
           </div>
@@ -113,9 +114,7 @@ function Sortiment() {
           />
           <div className="absolute bottom-0 left-0 w-full">
             <div className="greenBox">
-              <p className=" text-white text-sm  text-center font-medium">
-                Realizace sadových úprav{" "}
-              </p>
+              <p className=" text-white text-sm  text-center font-medium"></p>
             </div>
           </div>
         </div>
