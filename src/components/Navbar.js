@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "assets/hitflora-(1).png";
 import { LiaPhoneVolumeSolid, LiaPhoneSlashSolid } from "react-icons/lia";
 
 const Navbar = () => {
@@ -17,8 +16,8 @@ const Navbar = () => {
     { path: "/", label: "Domů" },
     { path: "/aktualne", label: "Aktuálně" },
     { path: "/sortiment", label: "Sortiment" },
-    { path: "/services", label: "Naše služby", isAnchor: true }, // Example for an anchor link
-    { path: "/about", label: "O nás", isAnchor: true },
+    { path: "/nase_sluzby", label: "Naše služby", isAnchor: true }, // Example for an anchor link
+    { path: "/o_nas", label: "O nás", isAnchor: true },
     { path: "/kontakt", label: "Kontakt" },
   ];
 
@@ -89,7 +88,11 @@ const Navbar = () => {
             {/* Logo and company name */}
             <h3 className="pr-2 font-bold">HiT</h3>
             <Link to="/">
-              <img src={logo} alt="logo" className="text-white h-8 w-8 " />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/hitflora-(1).png"}
+                alt="logo"
+                className="text-white h-8 w-8 "
+              />
             </Link>
             <h3 className="text-logoRed pl-2 font-bold">FLORA s.r.o.</h3>
           </div>

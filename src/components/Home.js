@@ -1,27 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import main from "assets/sklenik.jpg";
-import sprays from "assets/sprays.svg";
-import fertilizers from "assets/fertilizers.svg";
-import substrates from "assets/substrates.svg";
-import planters from "assets/planters.svg";
-import plants from "assets/plants.svg";
-import forest from "assets/forest.svg";
-import location from "assets/location-38.svg";
-import mail from "assets/mail.svg";
-import phone from "assets/phone.svg";
-import logo from "assets/hitflora-(1).png";
-
-import dreviny from "assets/sem.jpg";
-import sale from "assets/sale.jpg";
-import water from "assets/water.jpg";
-import flower from "assets/fl.jpeg";
-import onion from "assets/onion.jpg";
-import decor from "assets/ladn1.jpg";
-import man from "assets/man.jpg";
-import sklenik from "assets/sklenik.jpg";
-import kosik from "assets/kosik.jpg";
 import Navbar from "./Navbar";
 import CookieBanner from "./CookieBanner";
 import Footer from "./Footer";
@@ -37,7 +16,7 @@ function Home() {
       <div
         className="relative md:h-96 w-full flex z-20 pt-20 md:pt-0 "
         style={{
-          background: `url(${kosik})`,
+          background: `url(${process.env.PUBLIC_URL + "/assets/kosik.jpg"})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -59,7 +38,7 @@ function Home() {
       {/* hero end */}
       {/* content start */}
       <div className="bg-lightYellow w-full md:h-96 flex items-center justify-center">
-        <div className="flex md:flex-row gap-32 md:px-44 mx-auto max-w-[1440px]">
+        <div className="flex md:flex-row gap-32 xl:px-44 mx-auto max-w-[1440px]">
           {/* left container */}
           <div className="flex flex-col md:w-1/2 px-5 justify-center mx-auto items-center md:items-start py-10 md:py-0">
             <p className="text-sm text-logoRed ">Od roku 1992</p>
@@ -94,7 +73,7 @@ function Home() {
           {/* right container */}
           <div className="lg:flex hidden w-1/2 justify-center items-center mx-auto text-center">
             <img
-              src={main}
+              src={process.env.PUBLIC_URL + "/assets/sklenik.jpg"}
               alt="main"
               className="main w-80 h-80 "
               loading="lazy"
@@ -172,21 +151,21 @@ function Home() {
       {/* services start */}
       <div className=" w-full h-full bg-white max-w-[1440px] mx-auto">
         {/* title */}
-        <div className="flex flex-col md:px-64 mx-3 pt-6 ">
-          <h1 className="font-bold text-xl uppercase md:text-start text-center">
+        <div className="flex flex-col md:px-72 xl:items-start  items-center mx-3 pt-6 ">
+          <h2 className="font-bold text-xl uppercase md:text-start text-center">
             V našem zahradnictví{" "}
             <span className="text-headerGreen">nabízíme</span>
-          </h1>
+          </h2>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
         {/* cards start */}
-        <div className="flex flex-wrap gap-5 py-5 md:px-36 mx-auto items-center justify-center">
+        <div className="flex flex-wrap gap-5 py-5 md:px-24 lg:px-48 mx-auto items-center justify-center">
           <div className="card">
             <img
-              src={dreviny}
+              src={process.env.PUBLIC_URL + "/assets/sale.jpg"}
               alt="dřeviny"
-              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -199,9 +178,9 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={sale}
+              src={process.env.PUBLIC_URL + "/assets/water.jpg"}
               alt="sortiment"
-              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -214,9 +193,9 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={decor}
+              src={process.env.PUBLIC_URL + "/assets/ladn1.jpg"}
               alt="sortiment"
-              className=" object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className=" object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -229,9 +208,9 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={flower}
+              src={process.env.PUBLIC_URL + "/assets/path.jpg"}
               alt="flowers"
-              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -244,9 +223,9 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={water}
+              src={process.env.PUBLIC_URL + "/assets/zahrada.jpeg"}
               alt="projekty"
-              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -259,9 +238,9 @@ function Home() {
           </div>{" "}
           <div className="card">
             <img
-              src={onion}
+              src={process.env.PUBLIC_URL + "/assets/land.jpg"}
               alt="realizace"
-              className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -278,9 +257,9 @@ function Home() {
       {/* Services end */} {/* About start */}
       <div className="flex md:flex-row flex-col md:gap-24 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col md:ml-4  items-center md:items-start">
-          <h1 className="text-bold text-xl uppercase font-bold ">
+          <h2 className="text-bold text-xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
-          </h1>
+          </h2>
           {/* horizontal rule */}
           <hr class="h-px w-20 md:w-44 my-4 bg-lineGrey border-0 " />
         </div>
@@ -296,13 +275,13 @@ function Home() {
       {/* Two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={sklenik}
+          src={process.env.PUBLIC_URL + "/assets/water.jpg"}
           alt="sklenik"
           className="rounded-2xl  lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={man}
+          src={process.env.PUBLIC_URL + "/assets/man.jpg"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
@@ -313,11 +292,11 @@ function Home() {
       <div className="flex md:flex-row flex-col pt-10  items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         {/* left container */}
         <div className="flex flex-col lg:pl-0 md:ml-3 ">
-          <h1 className="text-bold text-xl uppercase font-bold">naše služby</h1>
-          <h1 className="text-bold text-xl uppercase font-bold text-headerGreen">
+          <h2 className="text-bold text-xl uppercase font-bold">naše služby</h2>
+          <h2 className="text-bold text-xl uppercase font-bold text-headerGreen">
             prodej
-          </h1>
-          <h1 className="text-bold text-xl uppercase font-bold">a realizace</h1>
+          </h2>
+          <h2 className="text-bold text-xl uppercase font-bold">a realizace</h2>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 " />
         </div>
@@ -355,7 +334,7 @@ function Home() {
         <div className="container-hours flex flex-col bg-lightGrey w-80 h-80 justify-center items-center text-center">
           {/* icon forest */}
           <img
-            src={forest}
+            src={process.env.PUBLIC_URL + "/assets/forest.svg"}
             alt="forest-icon"
             className="w-24 h-24 "
             loading="lazy"

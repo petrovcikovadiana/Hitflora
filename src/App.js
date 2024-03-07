@@ -18,8 +18,8 @@ function App() {
           <Route path="/sortiment" element={<Sortiment />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/aktualne" element={<Aktualne />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/o_nas" element={<About />} />
+          <Route path="/nase_sluzby" element={<Services />} />
           <Route path="/category/:categoryName" element={<CategoryPage />} />
         </Routes>
       </Router>

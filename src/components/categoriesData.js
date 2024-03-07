@@ -1,8 +1,8 @@
 const categoriesData = [
   {
     name: "Rostliny",
-    icon: "/hitflora/assets/plants.svg",
-    img: "/hitflora/assets/water.jpg",
+    icon: `${process.env.PUBLIC_URL}/assets/plants.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
     content: [
       "trvalky",
       "letničky",
@@ -46,8 +46,8 @@ const categoriesData = [
   },
   {
     name: "Substráty",
-    icon: "/hitflora/assets/substrates.svg",
-    img: "/hitflora/assets/water.jpg",
+    icon: `${process.env.PUBLIC_URL}/assets/substrates.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
     content: [
       {
         item: "zahradnické substráty včetně speciálních",
@@ -67,8 +67,8 @@ const categoriesData = [
   },
   {
     name: "Hnojiva",
-    icon: "/hitflora/assets/fertilizers.svg",
-    img: "/hitflora/assets/water.jpg",
+    icon: `${process.env.PUBLIC_URL}/assets/fertilizers.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
 
     content: [
       {
@@ -85,8 +85,8 @@ const categoriesData = [
   },
   {
     name: "Postřiky",
-    icon: "/hitflora/assets/sprays.svg",
-    img: "/hitflora/assets/water.jpg",
+    icon: `${process.env.PUBLIC_URL}/assets/sprays.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
 
     content: [
       {
@@ -103,8 +103,8 @@ const categoriesData = [
   },
   {
     name: "Truhlíky",
-    icon: "/hitflora/assets/planters.svg",
-    img: "/hitflora/assets/water.jpg",
+    icon: `${process.env.PUBLIC_URL}/assets/planters.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
 
     content: [
       "obyčejné",

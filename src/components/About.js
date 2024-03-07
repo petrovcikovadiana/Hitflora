@@ -1,13 +1,12 @@
 import React from "react";
-import man from "assets/man.jpg";
-import sklenik from "assets/sklenik.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookieBanner from "./CookieBanner";
 
 function About() {
   return (
     <div>
-      <Navbar />{" "}
+      <Navbar /> <CookieBanner />
       <div className="flex md:flex-row flex-col md:gap-24 md:items-center pt-24 my-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col md:ml-2  items-center md:items-start">
           <h1 className="text-bold text-xl uppercase font-bold ">
@@ -27,13 +26,13 @@ function About() {
       {/* two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={sklenik}
+          src={process.env.PUBLIC_URL + "/assets/sklenik.jpg"}
           alt="sklenik"
           className="rounded-2xl lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={man}
+          src={process.env.PUBLIC_URL + "/assets/man.jpg"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
@@ -63,13 +62,13 @@ function About() {
       {/* two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto md:pb-10  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={man}
+          src={process.env.PUBLIC_URL + "/assets/zahrada.jpeg"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={sklenik}
+          src={process.env.PUBLIC_URL + "/assets/path.jpg"}
           alt="sklenik"
           className="rounded-2xl lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"

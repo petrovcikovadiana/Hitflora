@@ -1,12 +1,29 @@
 import React from "react";
+import CookieBanner from "./CookieBanner";
 import Footer from "./Footer";
 import MapComponent from "./MapComponent";
 import Navbar from "./Navbar";
 
 function Kontakt() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Získání hodnot z formuláře
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    // Vytvoření mailto odkazu
+    const mailtoLink = `mailto:diana.petrovcikova@gmail.com?subject=Nová%20zpráva&body=Jméno:%20${name}%0DE-mail:%20${email}%0DZpráva:%20${message}`;
+
+    // Otevření e-mailového klienta
+    window.location.href = mailtoLink;
+  };
   return (
     <div>
-      <Navbar /> {/* contact form start */}
+      <Navbar />
+      <CookieBanner /> {/* contact form start */}
       <div className="flex flex-col md:px-64 mx-3 pt-24 items-center">
         <h1 className="font-bold text-xl uppercase  text-start">
           V případě dotazů nás kontaktujte, rádi Vám{" "}
@@ -21,7 +38,10 @@ function Kontakt() {
             Kontaktní&nbsp;<span className="text-headerGreen"> formulář</span>
           </h1>
 
-          <form className="max-w-md mx-auto my-10 px-16 md:px-0">
+          <form
+            onSubmit={handleSubmit}
+            className="max-w-md mx-auto my-10 px-16 md:px-0"
+          >
             <div className="mb-4">
               <label
                 htmlFor="name"

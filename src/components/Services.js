@@ -1,24 +1,17 @@
 import React from "react";
-
-import dreviny from "assets/sem.jpg";
-import sale from "assets/sale.jpg";
-import water from "assets/water.jpg";
-import flower from "assets/fl.jpeg";
-import onion from "assets/onion.jpg";
-import decor from "assets/ladn1.jpg";
-
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import categoriesData from "./categoriesData";
-
 import { Link } from "react-router-dom";
+import CookieBanner from "./CookieBanner";
 
 function Services() {
   return (
     <div>
-      <Navbar /> {/* hero start */}
+      <Navbar />
+      <CookieBanner /> {/* hero start */}
       <div className="my-16 max-w-[1440px] mx-auto">
-        <div className="flex flex-col md:px-56 md:text-start w-full mt-24 items-center md:items-start text-center ">
+        <div className="flex flex-col md:px-56 md:text-start w-full mt-24 items-center lg:items-start text-center ">
           <h1 className="text-black text-2xl font-bold uppercase opacity-100">
             naše služby
           </h1>
@@ -33,10 +26,10 @@ function Services() {
 
         {/* hero end */}
       </div>
-      <div className="flex flex-wrap gap-8 mx-auto max-w-[1440px] items-center justify-center md:px-44 my-10">
+      <div className="flex flex-wrap gap-8 mx-auto max-w-[1440px] items-center justify-center lg:px-44 md:px-0 my-10">
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-xl">
           <img
-            src={dreviny}
+            src={process.env.PUBLIC_URL + "/assets/man.jpg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}
@@ -58,7 +51,7 @@ function Services() {
         </div>
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-2xl">
           <img
-            src={sale}
+            src={process.env.PUBLIC_URL + "/assets/kosik.jpg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}
@@ -80,7 +73,7 @@ function Services() {
         </div>
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-2xl">
           <img
-            src={onion}
+            src={process.env.PUBLIC_URL + "/assets/sem.jpg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}
@@ -102,7 +95,7 @@ function Services() {
         </div>
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-2xl">
           <img
-            src={flower}
+            src={process.env.PUBLIC_URL + "/assets/water.jpg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}
@@ -124,7 +117,7 @@ function Services() {
         </div>
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-2xl">
           <img
-            src={decor}
+            src={process.env.PUBLIC_URL + "/assets/zahrada.jpeg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}
@@ -146,7 +139,7 @@ function Services() {
         </div>{" "}
         <div className="w-80 bg-white  h-[450px] rounded-lg shadow-2xl">
           <img
-            src={water}
+            src={process.env.PUBLIC_URL + "/assets/land.jpg"}
             className="p-4 max-h-56 object-cover w-full "
             alt="dreviny"
             style={{ borderRadius: "1.375rem" }}

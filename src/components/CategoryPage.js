@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import categoriesData from "./categoriesData";
+import CookieBanner from "./CookieBanner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
@@ -13,6 +14,7 @@ const CategoryPage = () => {
   return (
     <div>
       <Navbar />
+      <CookieBanner />
       <div className="bg-lightYellow flex flex-col gap-10 mx-auto items-center justify-center lg:pt-5 pb-0 lg:pb-44 ">
         <div className="flex flex-col bg-lightYellow mx-auto items-center pt-24">
           <h1 className="uppercase text-black font-bold text-2xl">

@@ -1,7 +1,7 @@
 import React from "react";
-import dreviny from "assets/sem.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookieBanner from "./CookieBanner";
 
 const cardInfo = [
   {
@@ -11,7 +11,6 @@ const cardInfo = [
       "Sezóna 2024 díky počasí právě začíná, již teď je pro Vás připravena široká nabídka jarních cibulovin, macešky, petrklíče, dále přibývá také sortiment skalniček, trvalek, okrasných rostlin a spoustu dalšího.",
       "Otevírací doba: Pondělí – Sobota 8:00 – 18:00 Nedělě 8:00 – 17:00 Těšíme se na Vaší návštěvu.",
     ],
-    image: dreviny,
     alt: "dřeviny",
   },
   {
@@ -21,7 +20,6 @@ const cardInfo = [
       "Sezóna 2024 díky počasí právě začíná, již teď je pro Vás připravena široká nabídka jarních cibulovin, macešky, petrklíče, dále přibývá také sortiment skalniček, trvalek, okrasných rostlin a spoustu dalšího.",
       "Otevírací doba: Pondělí – Sobota 8:00 – 18:00 Nedělě 8:00 – 17:00 Těšíme se na Vaší návštěvu.",
     ],
-    image: dreviny,
     alt: "dřeviny",
   },
   {
@@ -31,7 +29,6 @@ const cardInfo = [
       "Sezóna 2024 díky počasí právě začíná, již teď je pro Vás připravena široká nabídka jarních cibulovin, macešky, petrklíče, dále přibývá také sortiment skalniček, trvalek, okrasných rostlin a spoustu dalšího.",
       "Otevírací doba: Pondělí – Sobota 8:00 – 18:00 Nedělě 8:00 – 17:00 Těšíme se na Vaší návštěvu.",
     ],
-    image: dreviny,
     alt: "dřeviny",
   },
 ];
@@ -40,14 +37,18 @@ function Aktualne() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen flex bg-lightYellow">
+      <CookieBanner />
+      <div className="min-h-screen flex ">
         <div className=" w-full max-w-[1440px] mx-auto ">
-          <div className="md:items-start pt-24 md:ml-80 text-center md:text-start">
-            <h2 className="font-bold text-headerGreen uppercase text-2xl">
+          <div className=" pt-24 xl:px-80 xl:items-start xl:text-start text-center items-center ">
+            <h2 className="font-bold text-black uppercase text-2xl">
               Aktuálně
             </h2>
+            <h2 className="font-bold text-headerGreen uppercase text-2xl">
+              u nás
+            </h2>
             {/* Hr */}
-            <hr class="h-px w-24 my-2 bg-lineGrey border-0 opacity-100 mx-auto md:mx-0" />
+            <hr class="h-px w-24 my-2 bg-lineGrey border-0 opacity-100 mx-auto xl:mx-0" />
           </div>
 
           {/* Cards start */}
@@ -56,7 +57,7 @@ function Aktualne() {
               <div key={index}>
                 <div className="flex md:flex-row flex-col gap-5 items-center justify-center mx-auto md:my-10">
                   <img
-                    src={card.image}
+                    src={process.env.PUBLIC_URL + "/assets/land.jpg"}
                     alt={card.alt}
                     className="hidden md:block object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
                   />
