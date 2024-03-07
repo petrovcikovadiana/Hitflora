@@ -6,32 +6,32 @@ import CookieBanner from "./CookieBanner";
 
 const cardsData = [
   {
-    image: "/assets/man.jpg",
+    image: "/assets/avif/man.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku. ",
   },
   {
-    image: "/assets/kosik.jpg",
+    image: "/assets/avif/kosik.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku. ",
   },
   {
-    image: "/assets/kosik.jpg",
+    image: "/assets/avif/kosik.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku.",
   },
   {
-    image: "/assets/water.jpg",
+    image: "/assets/avif/water.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku. ",
   },
   {
-    image: "/assets/zahrada.jpeg",
+    image: "/assets/avif/zahrada.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku. ",
   },
   {
-    image: "/assets/man.jpg",
+    image: "/assets/avif/man.avif",
     alt: "dreviny",
     text: "Dřevina je cévnatá vytrvalá rostlina se schopností druhotného tloustnutí dřevnatého stonku.",
   },

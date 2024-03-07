@@ -26,13 +26,13 @@ function About() {
       {/* two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={process.env.PUBLIC_URL + "/assets/sklenik.jpg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/sklenik.avif"}
           alt="sklenik"
           className="rounded-2xl lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={process.env.PUBLIC_URL + "/assets/man.jpg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/man.avif"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
@@ -62,13 +62,13 @@ function About() {
       {/* two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto md:pb-10  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={process.env.PUBLIC_URL + "/assets/zahrada.jpeg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/zahrada.avif"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={process.env.PUBLIC_URL + "/assets/path.jpg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
           alt="sklenik"
           className="rounded-2xl lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"

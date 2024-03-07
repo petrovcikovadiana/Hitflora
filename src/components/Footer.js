@@ -17,7 +17,7 @@ function Footer() {
             <h3 className="font-bold">HiT</h3>
             <Link to="/">
               <img
-                src={process.env.PUBLIC_URL + "/assets/hitflora-(1).png"}
+                src={process.env.PUBLIC_URL + "/assets/avif/logo.avif"}
                 alt="logo"
                 className="text-white h-8 w-8"
                 loading="lazy"
