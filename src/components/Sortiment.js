@@ -14,7 +14,7 @@ function Sortiment() {
       <CookieBanner />
       {/* hero start */}
       <div className="my-16 max-w-[1440px] mx-auto">
-        <div className="flex flex-col md:px-72 md:text-start w-full mt-24 items-center md:items-start text-center ">
+        <div className="flex flex-col md:px-80 md:text-start w-full mt-24 items-center md:items-start text-center ">
           <h1 className="text-black text-2xl font-bold uppercase opacity-100">
             Prodejna
           </h1>
@@ -35,7 +35,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[0].name}
                 </p>
@@ -50,7 +50,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[1].name}
                 </p>
@@ -65,7 +65,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[2].name}
                 </p>
@@ -80,7 +80,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[3].name}
                 </p>
@@ -95,7 +95,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[4].name}
                 </p>
@@ -110,7 +110,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[4].name}
                 </p>
@@ -125,7 +125,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[4].name}
                 </p>
@@ -140,7 +140,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[4].name}
                 </p>
@@ -155,7 +155,7 @@ function Sortiment() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxs">
                 <p className=" text-white text-md  text-center font-medium">
                   {categoriesData[4].name}
                 </p>

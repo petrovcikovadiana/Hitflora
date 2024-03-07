@@ -25,7 +25,7 @@ function Kontakt() {
       <Navbar />
       <CookieBanner /> {/* contact form start */}
       <div className="flex flex-col md:px-64 mx-3 pt-24 items-center">
-        <h1 className="font-bold text-xl uppercase  text-start">
+        <h1 className="font-bold text-2xl uppercase  text-start">
           V případě dotazů nás kontaktujte, rádi Vám{" "}
           <span className="text-headerGreen">poradíme</span>
         </h1>
@@ -34,9 +34,9 @@ function Kontakt() {
       </div>
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 my-12 md:my-10 px-4 xl:px-80 max-w-[1440px] mx-auto">
         <div className="md:w-1/2">
-          <h1 className="text-black text-xl uppercase font-bold flex items-center justify-center mx-auto">
+          <h2 className="text-black text-xl uppercase font-bold flex items-center justify-center mx-auto">
             Kontaktní&nbsp;<span className="text-headerGreen"> formulář</span>
-          </h1>
+          </h2>
 
           <form
             onSubmit={handleSubmit}

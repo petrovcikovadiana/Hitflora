@@ -42,10 +42,10 @@ function Home() {
           {/* left container */}
           <div className="flex flex-col md:w-1/2 px-5 justify-center mx-auto items-center md:items-start py-10 md:py-0">
             <p className="text-sm text-logoRed ">Od roku 1992</p>
-            <h1 className="text-3xl font-bolder pb-5 text-center md:text-start">
+            <h2 className="text-3xl font-bolder pb-5 text-center md:text-start">
               Sadovnické úpravy a{" "}
               <span className="text-headerGreen"> prodej okrasných dřevin</span>
-            </h1>
+            </h2>
             <p className="text-sm tracking-widest pb-5 text-center md:text-start">
               Naše firma se specializuje nejen na běžný provoz gardencentra, ale
               také na komplexní péči o zahradní prostředí. Zabýváme se sadovými
@@ -152,10 +152,10 @@ function Home() {
       <div className=" w-full h-full bg-white max-w-[1440px] mx-auto">
         {/* title */}
         <div className="flex flex-col md:px-72 xl:items-start  items-center mx-3 pt-6 ">
-          <h2 className="font-bold text-xl uppercase md:text-start text-center">
+          <h3 className="font-bold text-xl uppercase md:text-start text-center">
             V našem zahradnictví{" "}
             <span className="text-headerGreen">nabízíme</span>
-          </h2>
+          </h3>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
@@ -169,7 +169,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Vlastní produkce dřevin
                 </p>
@@ -184,7 +184,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Široký sortiment rostlin
                 </p>
@@ -199,7 +199,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Doručení zboží
                 </p>
@@ -214,7 +214,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Údržba zeleně
                 </p>
@@ -229,7 +229,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Projekty zahrad{" "}
                 </p>
@@ -244,7 +244,7 @@ function Home() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBox">
+              <div className="greenBoxh">
                 <p className=" text-white text-sm  text-center font-medium">
                   Realizace sadových úprav{" "}
                 </p>
@@ -257,9 +257,9 @@ function Home() {
       {/* Services end */} {/* About start */}
       <div className="flex md:flex-row flex-col md:gap-24 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col md:ml-4  items-center md:items-start">
-          <h2 className="text-bold text-xl uppercase font-bold ">
+          <h3 className="text-bold text-xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
-          </h2>
+          </h3>
           {/* horizontal rule */}
           <hr class="h-px w-20 md:w-44 my-4 bg-lineGrey border-0 " />
         </div>
@@ -292,11 +292,11 @@ function Home() {
       <div className="flex md:flex-row flex-col pt-10  items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         {/* left container */}
         <div className="flex flex-col lg:pl-0 md:ml-3 ">
-          <h2 className="text-bold text-xl uppercase font-bold">naše služby</h2>
-          <h2 className="text-bold text-xl uppercase font-bold text-headerGreen">
+          <h3 className="text-bold text-xl uppercase font-bold">naše služby</h3>
+          <h3 className="text-bold text-xl uppercase font-bold text-headerGreen">
             prodej
-          </h2>
-          <h2 className="text-bold text-xl uppercase font-bold">a realizace</h2>
+          </h3>
+          <h3 className="text-bold text-xl uppercase font-bold">a realizace</h3>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 " />
         </div>
@@ -339,7 +339,7 @@ function Home() {
             className="w-24 h-24 "
             loading="lazy"
           />
-          <h3 className="font-bolder py-2">Otevírací doba</h3>
+          <h5 className="font-bolder py-2">Otevírací doba</h5>
           {/* dot with times */}
 
           <div className="flex flex-row gap-3 items-center pb-2">

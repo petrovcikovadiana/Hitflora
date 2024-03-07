@@ -59,12 +59,12 @@ function Aktualne() {
                   <img
                     src={process.env.PUBLIC_URL + "/assets/land.jpg"}
                     alt={card.alt}
-                    className="hidden md:block object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
+                    className="block object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
                   />
                   <div className="md:w-1/3">
-                    <p className="text-logoRed text-sm pb-2 font-bold">
+                    <h5 className="text-logoRed text-sm pb-2 font-bold">
                       {card.date}
-                    </p>
+                    </h5>
                     <h3 className="text-headerGreen text-2xl pb-5">
                       {card.title}
                     </h3>
