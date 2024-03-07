@@ -1,8 +1,8 @@
 const categoriesData = [
   {
     name: "Rostliny",
-    icon: `${process.env.PUBLIC_URL}/assets/plants.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
+    icon: `${process.env.PUBLIC_URL}/assets/svg/plants.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
     content: [
       "trvalky",
       "letničky",
@@ -46,8 +46,8 @@ const categoriesData = [
   },
   {
     name: "Substráty",
-    icon: `${process.env.PUBLIC_URL}/assets/fertilizers.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
+    icon: `${process.env.PUBLIC_URL}/assets/svg/fertilizers.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
     content: [
       {
         item: "zahradnické substráty včetně speciálních",
@@ -67,8 +67,8 @@ const categoriesData = [
   },
   {
     name: "Hnojiva",
-    icon: `${process.env.PUBLIC_URL}/assets/substrates.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
+    icon: `${process.env.PUBLIC_URL}/assets/svg/substrates.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
 
     content: [
       {
@@ -85,8 +85,8 @@ const categoriesData = [
   },
   {
     name: "Postřiky",
-    icon: `${process.env.PUBLIC_URL}/assets/sprays.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
+    icon: `${process.env.PUBLIC_URL}/assets/svg/sprays.svg`,
+    img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
 
     content: [
       {
@@ -103,8 +103,8 @@ const categoriesData = [
   },
   {
     name: "Truhlíky",
-    icon: `${process.env.PUBLIC_URL}/assets/planters.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
+    icon: `${process.env.PUBLIC_URL}/assets/svg/planters.svg`,
+    img: `${process.env.PUBLIC_URL}/avif/assets/water.avif`,
 
     content: [
       "obyčejné",

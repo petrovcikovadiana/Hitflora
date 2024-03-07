@@ -29,7 +29,7 @@ function Sortiment() {
         <div className="flex flex-wrap gap-5  py-10 md:px-24 lg:px-48 mx-auto items-center justify-center max-w-[1440px]">
           <Link to={`/category/${categoriesData[0].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/sem.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/barvy.avif"}
               alt="dřeviny"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -44,7 +44,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[1].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/fl.jpeg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/barvy.avif"}
               alt="sortiment"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -59,7 +59,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[2].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/onion.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/onion.avif"}
               alt="sortiment"
               className=" object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -74,7 +74,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[3].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/sale.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
               alt="flowers"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -89,7 +89,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[4].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/water.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
               alt="projekty"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -104,7 +104,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[4].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/sklenik.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/sklenik.avif"}
               alt="realizace"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -119,7 +119,7 @@ function Sortiment() {
           </Link>
           <Link to={`/category/${categoriesData[4].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/land.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
               alt="realizace"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -134,7 +134,7 @@ function Sortiment() {
           </Link>{" "}
           <Link to={`/category/${categoriesData[4].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/onion.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/onion.avif"}
               alt="realizace"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"
@@ -149,7 +149,7 @@ function Sortiment() {
           </Link>{" "}
           <Link to={`/category/${categoriesData[4].name}`} className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/path.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
               alt="realizace"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
               loading="lazy"

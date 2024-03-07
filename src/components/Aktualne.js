@@ -57,7 +57,7 @@ function Aktualne() {
               <div key={index}>
                 <div className="flex md:flex-row flex-col gap-5 items-center justify-center mx-auto md:my-10">
                   <img
-                    src={process.env.PUBLIC_URL + "/assets/land.jpg"}
+                    src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
                     alt={card.alt}
                     className="block object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
                   />

@@ -16,7 +16,9 @@ function Home() {
       <div
         className="relative md:h-96 w-full flex z-20 pt-20 md:pt-0 "
         style={{
-          background: `url(${process.env.PUBLIC_URL + "/assets/kosik.jpg"})`,
+          background: `url(${
+            process.env.PUBLIC_URL + "/assets/avif/kosik.avif"
+          })`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -73,7 +75,7 @@ function Home() {
           {/* right container */}
           <div className="lg:flex hidden w-1/2 justify-center items-center mx-auto text-center">
             <img
-              src={process.env.PUBLIC_URL + "/assets/sklenik.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/sklenik.avif"}
               alt="main"
               className="main w-80 h-80 "
               loading="lazy"
@@ -163,9 +165,10 @@ function Home() {
         <div className="flex flex-wrap gap-5 py-5 md:px-24 lg:px-48 mx-auto items-center justify-center">
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/sale.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
               alt="dřeviny"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -178,9 +181,10 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/water.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
               alt="sortiment"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -193,9 +197,10 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/ladn1.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/decoration.avif"}
               alt="sortiment"
               className=" object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/decoration.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -208,9 +213,10 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/path.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
               alt="flowers"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -223,9 +229,10 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/zahrada.jpeg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/zahrada.avif"}
               alt="projekty"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/zahrada.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -238,9 +245,10 @@ function Home() {
           </div>{" "}
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + "/assets/land.jpg"}
+              src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
               alt="realizace"
               className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+              data-src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
@@ -275,13 +283,13 @@ function Home() {
       {/* Two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
-          src={process.env.PUBLIC_URL + "/assets/water.jpg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
           alt="sklenik"
           className="rounded-2xl  lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
           loading="lazy"
         />
         <img
-          src={process.env.PUBLIC_URL + "/assets/man.jpg"}
+          src={process.env.PUBLIC_URL + "/assets/avif/man.avif"}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
           loading="lazy"
@@ -334,7 +342,7 @@ function Home() {
         <div className="container-hours flex flex-col bg-lightGrey w-80 h-80 justify-center items-center text-center">
           {/* icon forest */}
           <img
-            src={process.env.PUBLIC_URL + "/assets/forest.svg"}
+            src={process.env.PUBLIC_URL + "/assets/svg/forest.svg"}
             alt="forest-icon"
             className="w-24 h-24 "
             loading="lazy"
