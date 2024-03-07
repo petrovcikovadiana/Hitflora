@@ -75,6 +75,17 @@ body.active-modal {
   aspect-ratio: 2/3;
 }
 
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-container img {
+  width: 100%; /* Adjust as needed */
+  height: auto;
+}
+
 @layer components {
   .circle {
     @apply flex flex-col w-32 h-32 rounded-full bg-circleGreen items-center justify-center;
@@ -85,6 +96,13 @@ body.active-modal {
   }
 
   .greenBox {
-    @apply bg-boxGreen opacity-85 absolute w-full h-14 bottom-0 left-0 rounded-b-2xl flex items-center justify-center;
+    @apply bg-boxGreen opacity-85 absolute w-full min-h-16 bottom-0 left-0 rounded-b-2xl flex items-center justify-center;
+  }
+
+  .infoBox {
+    background-color: white; /* Bílé pozadí pro nový box */
+    color: black; /* Černá barva textu */
+    padding: 10px; /* Padding pro text v boxu */
+    /* Další potřebné styly */
   }
 }

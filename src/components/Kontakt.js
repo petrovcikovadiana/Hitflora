@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import MapComponent from "./MapComponent";
 import Navbar from "./Navbar";
 
@@ -7,7 +8,7 @@ function Kontakt() {
     <div>
       <Navbar /> {/* contact form start */}
       <div className="flex flex-col md:px-64 mx-3 pt-24 items-center">
-        <h1 className="font-bold text-xl uppercase  text-center">
+        <h1 className="font-bold text-xl uppercase  text-start">
           V případě dotazů nás kontaktujte, rádi Vám{" "}
           <span className="text-headerGreen">poradíme</span>
         </h1>
@@ -76,6 +77,7 @@ function Kontakt() {
         </div>
         <MapComponent />
       </div>
+      <Footer />
     </div>
   );
 }

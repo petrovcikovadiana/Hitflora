@@ -1,9 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { SlSocialFacebook } from "react-icons/sl";
-import { SlSocialInstagram, SlLocationPin } from "react-icons/sl";
-import { GoMail } from "react-icons/go";
-import { BsTelephone } from "react-icons/bs";
 
 import main from "assets/sklenik.jpg";
 import sprays from "assets/sprays.svg";
@@ -28,32 +24,11 @@ import sklenik from "assets/sklenik.jpg";
 import kosik from "assets/kosik.jpg";
 import Navbar from "./Navbar";
 import CookieBanner from "./CookieBanner";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import Footer from "./Footer";
+
+import categoriesData from "./categoriesData";
 
 function Home() {
-  const [open, setOpen] = useState(false);
-
-  const [modal, setModal] = useState(false);
-
-  const toggleModal = () => {
-    setModal(!modal);
-  };
-
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
-
-  // circles
-  const categories = [
-    { id: 1, img: plants, title: "Rostliny", clickAction: toggleModal },
-    { id: 2, img: fertilizers, title: "Substráty" },
-    { id: 3, img: substrates, title: "Hnojiva" },
-    { id: 4, img: sprays, title: "Postřiky" },
-    { id: 5, img: planters, title: "Truhlíky" },
-  ];
-
   return (
     <div>
       <Navbar />
@@ -118,70 +93,78 @@ function Home() {
           </div>
           {/* right container */}
           <div className="lg:flex hidden w-1/2 justify-center items-center mx-auto text-center">
-            <img src={main} alt="main" className="main w-80 h-80 " />
+            <img
+              src={main}
+              alt="main"
+              className="main w-80 h-80 "
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
       {/* content end */}
       {/* circles start */}
       <div className="bg-lightYellow flex md:flex-row flex-wrap gap-10 mx-auto items-center justify-center pb-20 lg:pt-5">
-        {categories.map((category) => (
-          <div key={category.id} className="circle">
+        <Link to={`/category/${categoriesData[0].name}`} className="circle">
+          {categoriesData[0].icon ? (
             <img
-              src={category.img}
-              alt={category.title}
-              className={`w-14 h-14 ${
-                category.clickAction ? "cursor-pointer" : ""
-              }`}
-              onClick={category.clickAction ? category.clickAction : null}
+              src={categoriesData[0].icon}
+              alt="plant"
+              className="w-14 h-14"
             />
-            <h3 className="text-darkGreen">{category.title}</h3>
-          </div>
-        ))}
-      </div>
-      <div className="md:flex hidden text-lightWhite">
-        {modal && (
-          <div className="modal">
-            <div onClick={toggleModal} className="overlay"></div>
-            <div className="modal-content  mx-auto text-center ">
-              <h2 className="text-center uppercase text-xl font-bold text-gray-900">
-                Rostliny{" "}
-              </h2>
-              <h2 className="uppercase font-bold text-headerGreen">
-                Náš sortiment
-              </h2>
-              <hr class="h-px w-56 my-8 bg-lineGrey border-0 mx-auto opacity-100" />
-              {/* content */}
-              <div className="flex flex-row gap-2 items-center justify-center">
-                <img src={plants} alt="plants" className="w-10 h-10 " />
-                <p className=" items-center text-gray-900 text-base justify-center text-center ">
-                  trvalky
-                </p>
-              </div>
-              <div className="flex flex-row gap-2 items-center justify-center">
-                <img src={plants} alt="plants" className="w-10 h-10 " />
-                <p className=" items-center text-gray-900 text-base justify-center text-center ">
-                  letničky
-                </p>
-              </div>
-              <div className="flex flex-row gap-2 items-center justify-center">
-                <img src={plants} alt="plants" className="w-10 h-10 " />
-                <p className=" items-center text-gray-900 text-base justify-center text-center ">
-                  okrasné trávy
-                </p>
-              </div>{" "}
-              <div className="flex flex-row gap-2 items-center justify-center">
-                <img src={plants} alt="plants" className="w-10 h-10 " />
-                <p className=" items-center text-gray-900 text-base justify-center text-center ">
-                  vinná réva
-                </p>
-              </div>
-              <button className="close-modal" onClick={toggleModal}>
-                <AiOutlineCloseCircle />
-              </button>
-            </div>
-          </div>
-        )}
+          ) : (
+            <div className="w-14 h-14" />
+          )}
+          <h3 className="text-darkGreen">{categoriesData[0].name}</h3>
+        </Link>
+        <Link to={`/category/${categoriesData[1].name}`} className="circle">
+          {categoriesData[1].icon ? (
+            <img
+              src={categoriesData[1].icon}
+              alt="plant"
+              className="w-14 h-14"
+            />
+          ) : (
+            <div className="w-14 h-14" />
+          )}
+          <h3 className="text-darkGreen">{categoriesData[1].name}</h3>
+        </Link>
+        <Link to={`/category/${categoriesData[2].name}`} className="circle">
+          {categoriesData[2].icon ? (
+            <img
+              src={categoriesData[2].icon}
+              alt="plant"
+              className="w-14 h-14"
+            />
+          ) : (
+            <div className="w-14 h-14" />
+          )}
+          <h3 className="text-darkGreen">{categoriesData[2].name}</h3>
+        </Link>
+        <Link to={`/category/${categoriesData[3].name}`} className="circle">
+          {categoriesData[3].icon ? (
+            <img
+              src={categoriesData[3].icon}
+              alt="plant"
+              className="w-14 h-14"
+            />
+          ) : (
+            <div className="w-14 h-14" />
+          )}
+          <h3 className="text-darkGreen">{categoriesData[3].name}</h3>
+        </Link>
+        <Link to={`/category/${categoriesData[4].name}`} className="circle">
+          {categoriesData[4].icon ? (
+            <img
+              src={categoriesData[4].icon}
+              alt="plant"
+              className="w-14 h-14"
+            />
+          ) : (
+            <div className="w-14 h-14" />
+          )}
+          <h3 className="text-darkGreen">{categoriesData[4].name}</h3>
+        </Link>
       </div>
       {/* circles end */}
       {/* carousel start */}
@@ -204,6 +187,7 @@ function Home() {
               src={dreviny}
               alt="dřeviny"
               className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -218,6 +202,7 @@ function Home() {
               src={sale}
               alt="sortiment"
               className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -232,6 +217,7 @@ function Home() {
               src={decor}
               alt="sortiment"
               className=" object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -246,6 +232,7 @@ function Home() {
               src={flower}
               alt="flowers"
               className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -260,6 +247,7 @@ function Home() {
               src={water}
               alt="projekty"
               className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -274,6 +262,7 @@ function Home() {
               src={onion}
               alt="realizace"
               className="object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBox">
@@ -284,10 +273,10 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* cards end */}
+        {/* Cards end */}
       </div>
-      {/* services end */}{" "}
-      <div className="flex md:flex-row flex-col md:gap-44 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
+      {/* Services end */} {/* About start */}
+      <div className="flex md:flex-row flex-col md:gap-24 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col md:ml-4  items-center md:items-start">
           <h1 className="text-bold text-xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
@@ -303,17 +292,20 @@ function Home() {
           </p>
         </div>
       </div>
-      {/* two images in row start*/}
+      {/* About end */}
+      {/* Two images in row start*/}
       <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
         <img
           src={sklenik}
           alt="sklenik"
           className="rounded-2xl  lg:w-[280px] lg:h-[350px] md:w-[180px] md:h-[250px]"
+          loading="lazy"
         />
         <img
           src={man}
           alt="man"
           className="rounded-2xl lg:w-[654px] lg:h-[350px] md:w-[554px] md:h-[250px]"
+          loading="lazy"
         />
       </div>
       {/* two images in row end*/}
@@ -362,7 +354,12 @@ function Home() {
       <div className="flex md:w-1/2 justify-center items-center mx-auto text-center py-10">
         <div className="container-hours flex flex-col bg-lightGrey w-80 h-80 justify-center items-center text-center">
           {/* icon forest */}
-          <img src={forest} alt="forest-icon" className="w-24 h-24 " />
+          <img
+            src={forest}
+            alt="forest-icon"
+            className="w-24 h-24 "
+            loading="lazy"
+          />
           <h3 className="font-bolder py-2">Otevírací doba</h3>
           {/* dot with times */}
 
@@ -387,66 +384,7 @@ function Home() {
         </div>
       </div>
       {/* opening hours end */}
-      {/* footer start */}
-      <div className="w-full md:h-44 bg-circleGreen md:px-44 text-sm mx-auto text-center">
-        <div className="flex md:flex-row flex-col md:gap-12 gap-4 items-center justify-center py-8 ">
-          {/* Logo */}
-          <div className="flex flex-row gap-2 items-center justify-center   ">
-            {" "}
-            <h3 className="font-bold">HiT</h3>
-            <Link to="/">
-              <img src={logo} alt="logo" className="text-white h-8 w-8" />
-              {/* Use appropriate styling for your logo */}
-            </Link>
-            <h3 className="text-logoRed font-bold">FLORA s.r.o.</h3>{" "}
-          </div>
-          <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
-            <SlLocationPin className="w-7 h-7 text-headerGreen" />
-            <div className="">
-              {" "}
-              <p>HiT FLORA s.r.o.</p>
-              <p>Vítězství 216</p>
-              <p>405 02 Děčín 31</p>
-              <p>Křešice</p>
-            </div>
-          </div>
-          <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center ">
-            <GoMail className="w-7 h-7 text-headerGreen" />
-            <div>
-              {" "}
-              <p>Ing. Břetislav Hons</p>
-              <p className="pb-3">hitflora@hitflora.cz</p>
-              <p>Ing. Renáta Tesárová</p>
-              <p className="font-bold text-headerGreen">Zahradní architekt</p>
-              <p>tesarova@hitflora.cz</p>
-            </div>
-          </div>{" "}
-          <div className="text-sm flex md:flex-row flex-col md:gap-5 gap-3 items-center justify-center text-center">
-            <BsTelephone className="w-7 h-7 text-headerGreen" />
-            <div>
-              {" "}
-              <p className="font-bold text-headerGreen">Mobil</p>
-              <p>+420 775 102 189</p>
-              <p className="font-bold text-headerGreen">Prodejna</p>
-              <p>+420 412 517 027</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center text-center">
-            <p>Sledujte nás na sociálních sítích</p>
-            <div className="flex flex-row items-center pt-3 justify-center">
-              {" "}
-              <SlSocialInstagram className="w-6 h-6 text-headerGreen" />
-              <a
-                href="https://www.facebook.com/profile.php?id=100046941041164"
-                target="_blank"
-              >
-                <SlSocialFacebook className="w-7 h-7 text-headerGreen" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* footer end */}
+      <Footer />
     </div>
   );
 }
