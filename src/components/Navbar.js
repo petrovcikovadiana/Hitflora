@@ -5,11 +5,22 @@ import logo from "assets/hitflora-(1).png";
 import { LiaPhoneVolumeSolid, LiaPhoneSlashSolid } from "react-icons/lia";
 
 const Navbar = () => {
+  // Function to change color of phone number
   const [textColor, setTextColor] = useState("");
   const [fillColor, setFillColor] = useState("");
   const [phoneIcon, setPhoneIcon] = useState(
     <LiaPhoneVolumeSolid className="w-5 h-5" />
   );
+
+  // Navbar links
+  const navLinks = [
+    { path: "/", label: "Domů" },
+    { path: "/aktualne", label: "Aktuálně" },
+    { path: "/sortiment", label: "Sortiment" },
+    { path: "/services", label: "Naše služby", isAnchor: true }, // Example for an anchor link
+    { path: "/about", label: "O nás", isAnchor: true },
+    { path: "/kontakt", label: "Kontakt" },
+  ];
 
   useEffect(() => {
     // Function to determine and set fill color and icon based on the current time
@@ -69,74 +80,47 @@ const Navbar = () => {
   };
 
   return (
-    // nav desktop
-    <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 mx-auto  md:max-w-[600px]  xl:max-w-[2560px]">
+    // Nav desktop
+    <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 w-full">
       <div className=" mx-auto px-7">
-        <div className="flex justify-between md:justify-center items-center h-16 space-x-20  ">
+        <div className="flex justify-between lg:justify-center items-center h-16 space-x-20  ">
           <div className="flex  items-center">
             {" "}
-            {/* Logo */}
+            {/* Logo and company name */}
             <h3 className="pr-2 font-bold">HiT</h3>
             <Link to="/">
-              {/* TEN STROM JE TURECKÁ LÍSKA */}
               <img src={logo} alt="logo" className="text-white h-8 w-8 " />
             </Link>
             <h3 className="text-logoRed pl-2 font-bold">FLORA s.r.o.</h3>
           </div>
 
-          <div className="flex items-center">
-            {/* nav list desktop*/}
-            <ul className="hidden md:flex space-x-6 px-44 lg:px-22">
-              <li>
-                <Link to="/">
-                  <a href="#home" className="text-white hover:text-accent">
-                    Domů
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link to="/aktualne">
-                  <a href="#about" className="text-white hover:text-accent">
-                    Aktuálně
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link to="/sortiment">
-                  <a href="/sortiment" className="text-white hover:text-accent">
-                    Sortiment
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <a href="#work" className="text-white hover:text-accent">
-                  Naše služby
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-white hover:text-accent">
-                  O nás
-                </a>
-              </li>
-              <li>
-                {" "}
-                <Link to="/kontakt">
-                  <a href="#contact" className="text-white hover:text-accent">
-                    Kontakt
-                  </a>
-                </Link>
-              </li>
+          <div className="hidden lg:flex items-center">
+            {/* Nav list desktop*/}
+            <ul className="hidden lg:flex space-x-4 xl:space-x-6 xl:px-44 items-center">
+              {" "}
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.path}>
+                    <a
+                      href={link.isAnchor ? link.path : null}
+                      className="text-white hover:text-headerGreen"
+                    >
+                      {link.label}
+                    </a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="hidden md:flex items-center">
-            {/* Phone number with icon */}
+          <div className="hidden lg:flex items-center">
+            {/* Phone icon and number */}
             <div className="flex items-center gap-2">
               {phoneIcon}
               <span style={{ color: textColor }}>+420 775 102 189</span>
             </div>
           </div>
-          <div className="md:hidden ">
-            {/* hamburger button mobile  */}
+          <div className="md:block lg:hidden">
+            {/* Hamburger button mobile  */}
             <button
               onClick={toggleMobileMenu}
               className="text-white p-2 focus:outline-none "
@@ -150,34 +134,18 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden  ">
-          {/* hamburger list */}
+        <div className="md:block lg:hidden  ">
+          {/* Hamburger links */}
           <ul className="flex flex-col space-y-5 pt-5 text-white items-center h-screen">
-            <li>
-              <a href="#home">Domů</a>
-            </li>
-            <li>
-              <Link to="/aktualne">
-                <a href="#about">Aktuálně</a>
-              </Link>
-            </li>
-            <li>
-              <Link to="/sortiment">
-                <a href="#services">Sortiment</a>
-              </Link>
-            </li>
-            <li>
-              <a href="#work">Naše služby</a>
-            </li>
-            <li>
-              <a href="#work">O nás</a>
-            </li>
-            <li>
-              <Link to="/kontakt">
-                <a href="#contact">Kontakt</a>
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <Link to={link.path}>
+                  <a href={link.isAnchor ? link.path : null}>{link.label}</a>
+                </Link>
+              </li>
+            ))}
             <div className="flex items-center gap-2 justify-center pt-10">
               {phoneIcon}
               <span style={{ color: textColor }}>+420 775 102 189</span>
