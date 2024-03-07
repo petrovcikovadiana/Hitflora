@@ -9,7 +9,7 @@ function About() {
       <Navbar /> <CookieBanner />
       <div className="flex md:flex-row flex-col md:gap-24 md:items-center pt-24 my-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col md:ml-2  items-center md:items-start">
-          <h1 className="text-bold text-xl uppercase font-bold ">
+          <h1 className="text-bold text-2xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
           </h1>
           {/* horizontal rule */}

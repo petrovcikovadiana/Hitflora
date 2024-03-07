@@ -95,8 +95,12 @@ body.active-modal {
     @apply md:w-64 md:h-48 w-48 h-40  relative;
   }
 
-  .greenBox {
-    @apply bg-boxGreen opacity-85 absolute w-full min-h-16 bottom-0 left-0 rounded-b-2xl flex items-center justify-center;
+  .greenBoxh {
+    @apply bg-boxGreen opacity-85 absolute w-full h-16 bottom-0 left-0 rounded-b-2xl flex items-center justify-center;
+  }
+
+  .greenBoxs {
+    @apply bg-boxGreen opacity-85 absolute w-full h-12 bottom-0 left-0 rounded-b-2xl flex items-center justify-center;
   }
 
   .infoBox {
