@@ -46,7 +46,7 @@ const categoriesData = [
   },
   {
     name: "Substráty",
-    icon: `${process.env.PUBLIC_URL}/assets/substrates.svg`,
+    icon: `${process.env.PUBLIC_URL}/assets/fertilizers.svg`,
     img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
     content: [
       {
@@ -67,7 +67,7 @@ const categoriesData = [
   },
   {
     name: "Hnojiva",
-    icon: `${process.env.PUBLIC_URL}/assets/fertilizers.svg`,
+    icon: `${process.env.PUBLIC_URL}/assets/substrates.svg`,
     img: `${process.env.PUBLIC_URL}/assets/water.jpg`,
 
     content: [
