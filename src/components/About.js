@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import man from "assets/man.jpg";
 import sklenik from "assets/sklenik.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Carousel from "./Carousel";
 
 function About() {
   return (

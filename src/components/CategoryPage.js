@@ -27,7 +27,7 @@ const CategoryPage = () => {
         <div className="flex md:flex-row flex-col gap-10">
           <img
             src={category?.img}
-            alt="category"
+            alt={categoryName}
             className="hidden md:block rounded-xl md:w-80 md:h-56 w-48 h-40 object-cover"
           />
           <ul>

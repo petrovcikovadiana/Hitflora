@@ -1,8 +1,8 @@
 const categoriesData = [
   {
     name: "Rostliny",
-    icon: "assets/plants.svg",
-    img: "assets/water.jpg",
+    icon: "/hitflora/assets/plants.svg",
+    img: "/hitflora/assets/water.jpg",
     content: [
       "trvalky",
       "letničky",
@@ -46,8 +46,8 @@ const categoriesData = [
   },
   {
     name: "Substráty",
-    icon: "assets/substrates.svg",
-    img: "assets/water.jpg",
+    icon: "/hitflora/assets/substrates.svg",
+    img: "/hitflora/assets/water.jpg",
     content: [
       {
         item: "zahradnické substráty včetně speciálních",
@@ -67,8 +67,8 @@ const categoriesData = [
   },
   {
     name: "Hnojiva",
-    icon: "assets/fertilizers.svg",
-    img: "assets/water.jpg",
+    icon: "/hitflora/assets/fertilizers.svg",
+    img: "/hitflora/assets/water.jpg",
 
     content: [
       {
@@ -85,8 +85,8 @@ const categoriesData = [
   },
   {
     name: "Postřiky",
-    icon: "assets/sprays.svg",
-    img: "assets/water.jpg",
+    icon: "/hitflora/assets/sprays.svg",
+    img: "/hitflora/assets/water.jpg",
 
     content: [
       {
@@ -103,8 +103,8 @@ const categoriesData = [
   },
   {
     name: "Truhlíky",
-    icon: "assets/planters.svg",
-    img: "assets/water.jpg",
+    icon: "/hitflora/assets/planters.svg",
+    img: "/hitflora/assets/water.jpg",
 
     content: [
       "obyčejné",
