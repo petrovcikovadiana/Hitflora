@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./App.css";
+import { createBrowserHistory } from "history";
 
 import Home from "./components/Home";
 import Sortiment from "./components/Sortiment";
@@ -29,9 +30,11 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const hist = createBrowserHistory();
+
   return (
     <div>
-      <Router basename="/">
+      <Router history={hist}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
