@@ -7,6 +7,44 @@ import Footer from "./Footer";
 
 import categoriesData from "./categoriesData";
 
+// Data pro zápis služeb
+const items = [
+  { text: "Nabízíme široký sortiment rostlin i doplňkového zboží" },
+  { text: "Poradíme Vám s výběrem rostlin a veškerého zboží" },
+  { text: "Po vzájemné dohodě Vám vybrané zboží doručíme" },
+  { text: "Osázíme Vám truhlíky a nádoby /keramiku, mísy apod./" },
+];
+
+// Data pro karty služeb
+const cards = [
+  {
+    src: "/assets/avif/sale.avif",
+    alt: "dřeviny",
+    text: "Vlastní produkce dřevin",
+  },
+  {
+    src: "/assets/avif/water.avif",
+    alt: "sortiment",
+    text: "Široký sortiment rostlin",
+  },
+  {
+    src: "/assets/avif/decoration.avif",
+    alt: "dekorace",
+    text: "Doručení zboží",
+  },
+  { src: "/assets/avif/path.avif", alt: "flowers", text: "Údržba zeleně" },
+  {
+    src: "/assets/avif/zahrada.avif",
+    alt: "projekty",
+    text: "Projekty zahrad",
+  },
+  {
+    src: "/assets/avif/land.avif",
+    alt: "realizace",
+    text: "Realizace sadových úprav",
+  },
+];
+
 function Home() {
   return (
     <div>
@@ -92,6 +130,7 @@ function Home() {
               src={categoriesData[0].icon}
               alt="plant"
               className="w-14 h-14"
+              loading="lazy"
             />
           ) : (
             <div className="w-14 h-14" />
@@ -104,6 +143,7 @@ function Home() {
               src={categoriesData[1].icon}
               alt="plant"
               className="w-14 h-14"
+              loading="lazy"
             />
           ) : (
             <div className="w-14 h-14" />
@@ -116,6 +156,7 @@ function Home() {
               src={categoriesData[2].icon}
               alt="plant"
               className="w-14 h-14"
+              loading="lazy"
             />
           ) : (
             <div className="w-14 h-14" />
@@ -128,6 +169,7 @@ function Home() {
               src={categoriesData[3].icon}
               alt="plant"
               className="w-14 h-14"
+              loading="lazy"
             />
           ) : (
             <div className="w-14 h-14" />
@@ -140,6 +182,7 @@ function Home() {
               src={categoriesData[4].icon}
               alt="plant"
               className="w-14 h-14"
+              loading="lazy"
             />
           ) : (
             <div className="w-14 h-14" />
@@ -163,102 +206,24 @@ function Home() {
         </div>
         {/* cards start */}
         <div className="flex flex-wrap gap-5 py-5 md:px-24 lg:px-48 mx-auto items-center justify-center">
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
-              alt="dřeviny"
-              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Vlastní produkce dřevin
-                </p>
+          {cards.map((card, index) => (
+            <div key={index} className="card">
+              <img
+                src={process.env.PUBLIC_URL + card.src}
+                alt={card.alt}
+                className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
+                data-src={process.env.PUBLIC_URL + card.src}
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 w-full">
+                <div className="greenBoxh">
+                  <p className="text-white text-sm text-center font-medium">
+                    {card.text}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
-              alt="sortiment"
-              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Široký sortiment rostlin
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/decoration.avif"}
-              alt="sortiment"
-              className=" object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/decoration.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Doručení zboží
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
-              alt="flowers"
-              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Údržba zeleně
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/zahrada.avif"}
-              alt="projekty"
-              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/zahrada.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Projekty zahrad{" "}
-                </p>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="card">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
-              alt="realizace"
-              className="object-cover md:w-64 md:h-48 w-48 h-40 rounded-2xl"
-              data-src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
-              loading="lazy"
-            />
-            <div className="absolute bottom-0 left-0 w-full">
-              <div className="greenBoxh">
-                <p className=" text-white text-sm  text-center font-medium">
-                  Realizace sadových úprav{" "}
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         {/* Cards end */}
       </div>
@@ -310,29 +275,13 @@ function Home() {
         </div>
         {/* right container */}
         <div className="lg:pl-40 md:pl-16 px-4 ">
-          <div className="flex flex-row gap-3 pb-2 ">
-            <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-            <p className="tracking-wider text-sm">
-              Nabízíme široký sortiment rostlin i doplňkového zboží
-            </p>
-          </div>
-          <div className="flex flex-row gap-3 pb-2">
-            <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-            <p className="tracking-wider text-sm">
-              Poradíme Vám s výběrem rostlin a veškerého zboží{" "}
-            </p>
-          </div>
-          <div className="flex flex-row gap-3 pb-2">
-            <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-            <p className="tracking-wider text-sm">
-              Po vzájemné dohodě Vám vybrané zboží doručíme{" "}
-            </p>
-          </div>{" "}
-          <div className="flex flex-row gap-3 pb-2">
-            <div class="h-4 w-4 rounded-full bg-headerGreen"></div>
-            <p className="tracking-wider text-sm">
-              Osázíme Vám truhlíky a nádoby /keramiku, mísy apod./{" "}
-            </p>
+          <div>
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-row gap-3 pb-2">
+                <div className="h-4 w-4 rounded-full bg-headerGreen"></div>
+                <p className="tracking-wider text-sm">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

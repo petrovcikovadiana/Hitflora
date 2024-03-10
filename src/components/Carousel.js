@@ -27,7 +27,7 @@ const Carousel = ({ images }) => {
     <div className="carousel">
       {displayImages.map((image, index) => (
         <div key={index} className="image-container">
-          <img src={image} alt={`Slide ${index}`} />
+          <img src={image} alt={`Slide ${index}`} loading="lazy" />
         </div>
       ))}
     </div>

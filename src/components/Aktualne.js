@@ -48,11 +48,11 @@ function Aktualne() {
               u nás
             </h2>
             {/* Hr */}
-            <hr class="h-px w-24 my-2 bg-lineGrey border-0 opacity-100 mx-auto xl:mx-0" />
+            <hr class="h-px w-24 my-4 bg-lineGrey border-0 opacity-100 mx-auto xl:mx-0" />
           </div>
 
           {/* Cards start */}
-          <div className="my-10 px-10 md:px-0 ">
+          <div className=" pt-10 md:pt-0 mb-16 px-10 md:px-0 ">
             {cardInfo.map((card, index) => (
               <div key={index}>
                 <div className="flex md:flex-row flex-col gap-5 items-center justify-center mx-auto md:my-10">
@@ -60,6 +60,7 @@ function Aktualne() {
                     src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
                     alt={card.alt}
                     className="block object-cover md:w-72 md:h-52 w-48 h-40 rounded-2xl "
+                    loading="lazy"
                   />
                   <div className="md:w-1/3">
                     <h5 className="text-logoRed text-sm pb-2 font-bold">

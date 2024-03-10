@@ -1,5 +1,5 @@
 {
-  "homepage": "https://petrovcikovadiana.github.io/Hitflora",
+  "homepage": "https://webgroo.com/",
   "name": "hitflora",
   "version": "0.1.0",
   "private": true,
@@ -8,12 +8,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "consent": "^0.1.4",
+    "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-cookie": "^7.1.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-    "react-router-dom": "^6.22.1",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

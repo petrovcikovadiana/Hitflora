@@ -21,13 +21,13 @@ function Sortiment() {
           <h1 className="text-headerGreen text-2xl font-bold uppercase opacity-100 ">
             Náš sortiment
           </h1>
-          <hr class="h-px w-44 mt-2 bg-lineGrey border-0 " />
+          <hr class="h-px w-44 mt-4 bg-lineGrey border-0 " />
         </div>
 
         {/* hero end */}
         {/* cards start */}
-        <div className="flex flex-wrap gap-5  py-10 md:px-24 lg:px-48 mx-auto items-center justify-center max-w-[1440px]">
-          <Link to={`/category/${categoriesData[0].name}`} className="card">
+        <div className="flex flex-wrap gap-5 pt-10 xxl:pb-60 md:px-24 lg:px-48 mx-auto items-center justify-center max-w-[1440px]">
+          <Link to={`/sortiment/${categoriesData[0].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/barvy.avif"}
               alt="dřeviny"
@@ -42,7 +42,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[1].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[1].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/barvy.avif"}
               alt="sortiment"
@@ -57,7 +57,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[2].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[2].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/onion.avif"}
               alt="sortiment"
@@ -72,7 +72,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[3].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[3].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/sale.avif"}
               alt="flowers"
@@ -87,7 +87,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[4].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[4].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
               alt="projekty"
@@ -102,7 +102,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[4].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[4].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/sklenik.avif"}
               alt="realizace"
@@ -117,7 +117,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>
-          <Link to={`/category/${categoriesData[4].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[4].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/land.avif"}
               alt="realizace"
@@ -132,7 +132,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>{" "}
-          <Link to={`/category/${categoriesData[4].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[4].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/onion.avif"}
               alt="realizace"
@@ -147,7 +147,7 @@ function Sortiment() {
               </div>
             </div>
           </Link>{" "}
-          <Link to={`/category/${categoriesData[4].name}`} className="card">
+          <Link to={`/sortiment/${categoriesData[4].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/path.avif"}
               alt="realizace"

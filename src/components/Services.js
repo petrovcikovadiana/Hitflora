@@ -42,7 +42,7 @@ function Services() {
     <div>
       <Navbar />
       <CookieBanner /> {/* hero start */}
-      <div className="my-10 max-w-[1440px] mx-auto">
+      <div className=" max-w-[1440px] mx-auto">
         <div className="flex flex-col md:px-80 md:text-start w-full mt-24 items-center lg:items-start text-center ">
           <h1 className="text-black text-2xl font-bold uppercase opacity-100">
             naše služby
@@ -53,12 +53,12 @@ function Services() {
           <h1 className="text-black text-2xl font-bold uppercase opacity-100 ">
             a realizace{" "}
           </h1>
-          <hr class="h-px w-44 my-4 bg-lineGrey border-0 " />
+          <hr class="h-px w-44 mt-4 bg-lineGrey border-0 " />
         </div>
 
         {/* hero end */}
       </div>
-      <div className="flex flex-wrap gap-8 mx-auto max-w-[1440px] items-center justify-center lg:px-44 md:px-0 my-10">
+      <div className="flex flex-wrap gap-8 pt-10 mx-auto max-w-[1440px] items-center justify-center lg:px-44 md:px-0 mb-16">
         {cardsData.map((card, index) => (
           <div
             key={index}

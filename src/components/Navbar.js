@@ -16,7 +16,7 @@ const Navbar = () => {
     { path: "/", label: "Domů" },
     { path: "/aktualne", label: "Aktuálně" },
     { path: "/sortiment", label: "Sortiment" },
-    { path: "/nase_sluzby", label: "Naše služby", isAnchor: true }, // Example for an anchor link
+    { path: "/nase_sluzby", label: "Naše služby", isAnchor: true },
     { path: "/o_nas", label: "O nás", isAnchor: true },
     { path: "/kontakt", label: "Kontakt" },
   ];
@@ -86,15 +86,14 @@ const Navbar = () => {
           <div className="flex  items-center">
             {" "}
             {/* Logo and company name */}
-            <h3 className="pr-2 font-bold">HiT</h3>
             <Link to="/">
               <img
-                src={process.env.PUBLIC_URL + "/assets/avif/logo.avif"}
+                src={process.env.PUBLIC_URL + "/assets/svg/logo-black.svg"}
                 alt="logo"
-                className="text-white h-8 w-8 "
+                className="text-white h-24 w-24"
+                loading="lazy"
               />
             </Link>
-            <h3 className="text-logoRed pl-2 font-bold">FLORA s.r.o.</h3>
           </div>
 
           <div className="hidden lg:flex items-center">

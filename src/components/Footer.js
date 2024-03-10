@@ -14,17 +14,15 @@ function Footer() {
           {/* Logo */}
           <div className="flex flex-row gap-2 items-center justify-center   ">
             {" "}
-            <h3 className="font-bold">HiT</h3>
             <Link to="/">
               <img
-                src={process.env.PUBLIC_URL + "/assets/avif/logo.avif"}
+                src={process.env.PUBLIC_URL + "/assets/svg/logo-white.svg"}
                 alt="logo"
-                className="text-white h-8 w-8"
+                className="text-white h-24 w-24"
                 loading="lazy"
               />
               {/* Use appropriate styling for your logo */}
             </Link>
-            <h3 className="text-logoRed font-bold">FLORA s.r.o.</h3>{" "}
           </div>
           <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
             <SlLocationPin className="w-7 h-7 text-headerGreen" />
@@ -66,15 +64,20 @@ function Footer() {
               {" "}
               <SlSocialInstagram className="w-6 h-6 text-headerGreen" />
               <a
-                href="https://www.facebook.com/profile.php?id=100046941041164"
+                href="https://www.facebook.com/Zahradnictv%C3%AD-Hit-Flora-105259054403271/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <SlSocialFacebook className="w-7 h-7 text-headerGreen" />
               </a>
             </div>
           </div>
         </div>
+        <div>
+          <button>Nastavení cookies</button>
+        </div>
       </div>
+
       {/* footer end */}
     </div>
   );

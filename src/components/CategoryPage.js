@@ -4,6 +4,8 @@ import categoriesData from "./categoriesData";
 import CookieBanner from "./CookieBanner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { IoArrowBack } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
@@ -15,23 +17,29 @@ const CategoryPage = () => {
     <div>
       <Navbar />
       <CookieBanner />
-      <div className="bg-lightYellow flex flex-col gap-10 mx-auto items-center justify-center lg:pt-5 pb-0 lg:pb-44 ">
-        <div className="flex flex-col bg-lightYellow mx-auto items-center pt-24">
-          <h1 className="uppercase text-black font-bold text-2xl">
-            náš sortiment
-          </h1>
-          <h1 className="uppercase text-headerGreen font-bold text-2xl">
-            {categoryName}
-          </h1>
+      <div className="bg-lightYellow flex flex-col gap-10  lg:pt-5 pb-0 lg:pb-44 ">
+        <div className="flex flex-col bg-lightYellow md:px-80 md:text-start pt-24">
+          {/* Mobile arrow button */}
+
+          <div className="flex flex-row">
+            <Link to="/sortiment">
+              <div className="absolute p-4 left-24 md:hidden">
+                <IoArrowBack />
+              </div>
+            </Link>
+            <div>
+              <h1 className="uppercase text-black font-bold text-2xl">
+                náš sortiment
+              </h1>
+              <h1 className="uppercase text-headerGreen font-bold text-2xl">
+                {categoryName}
+              </h1>
+            </div>
+          </div>
 
           <hr className="h-px w-32 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
-        <div className="flex md:flex-row flex-col gap-10">
-          <img
-            src={category?.img}
-            alt={categoryName}
-            className="hidden md:block rounded-xl md:w-80 md:h-56 w-48 h-40 object-cover"
-          />
+        <div className="flex md:flex-row  ml-80 flex-col gap-10 pb-5">
           <ul>
             {category?.content.map((item, index) => (
               <div
@@ -40,14 +48,15 @@ const CategoryPage = () => {
               >
                 {category.icon ? (
                   <img
-                    src={category.icon}
+                    src={`${process.env.PUBLIC_URL}/assets/svg/plants.svg`}
                     alt={categoryName}
                     className="w-7 h-7"
+                    loading="lazy"
                   />
                 ) : (
                   <div className="w-7 h-7" />
                 )}
-                <li className="flex flex-row gap-5 pb-5">
+                <li className="flex flex-col gap-5 pb-5">
                   {typeof item === "object" ? (
                     <>
                       <span>{item.item}</span>
@@ -70,6 +79,12 @@ const CategoryPage = () => {
               </div>
             ))}
           </ul>
+          {/* <img
+            src={category?.img}
+            alt={categoryName}
+            className="hidden md:block rounded-xl md:w-80 md:h-56 w-48 h-40 object-cover"
+            loading="lazy"
+          /> */}
         </div>
       </div>
       <Footer />
