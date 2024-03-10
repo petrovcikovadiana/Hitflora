@@ -26,7 +26,7 @@ function Sortiment() {
 
         {/* hero end */}
         {/* cards start */}
-        <div className="flex flex-wrap gap-5 pt-10 xxl:pb-60 md:px-24 lg:px-48 mx-auto items-center justify-center max-w-[1440px]">
+        <div className="flex flex-wrap gap-5 pt-10  md:px-24 lg:px-48 mx-auto items-center justify-center max-w-[1440px]">
           <Link to={`/sortiment/${categoriesData[0].name}`} className="card">
             <img
               src={process.env.PUBLIC_URL + "/assets/avif/barvy.avif"}

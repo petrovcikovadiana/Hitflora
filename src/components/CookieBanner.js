@@ -14,35 +14,49 @@ const CookieBanner = () => {
     const cookieConsent = Cookies.get("cookieConsent");
     if (cookieConsent === "true") {
       setShowCookieBanner(false);
+    } else {
+      const analyticsConsent = Cookies.get("analyticsConsent");
+      const technicalConsent = Cookies.get("technicalConsent");
+      const marketingConsent = Cookies.get("marketingConsent");
+
+      if (
+        analyticsConsent === "true" ||
+        technicalConsent === "true" ||
+        marketingConsent === "true"
+      ) {
+        setShowCookieBanner(false);
+      }
     }
-  }, []);
+  }, [analyticsChecked, technicalChecked, marketingChecked]);
 
   const handleAccept = () => {
     Cookies.set("cookieConsent", "true", { expires: 365, path: "/" });
 
-    // Skrytí cookie lišty
     setShowCookieBanner(false);
   };
 
   const handleDecline = () => {
-    Cookies.set("cookieConsent", "false", { path: "/" });
+    Cookies.set("cookieConsent", "false", { expires: 7, path: "/" });
 
     setShowCookieBanner(false);
   };
 
   const handleEdit = () => {
     if (analyticsChecked) {
-      Cookies.set("analyticsConsent", "true", { expires: 365, path: "/" });
-    }
-    if (technicalChecked) {
-      Cookies.set("technicalConsent", "true", { expires: 365, path: "/" });
-    }
-    if (marketingChecked) {
-      Cookies.set("marketingConsent", "true", { expires: 365, path: "/" });
+      Cookies.set("analyticsConsent", "true", { expires: 7, path: "/" });
     }
 
-    toggleModal();
+    if (technicalChecked) {
+      Cookies.set("technicalConsent", "true", { expires: 7, path: "/" });
+    }
+
+    if (marketingChecked) {
+      Cookies.set("marketingConsent", "true", { expires: 7, path: "/" });
+    }
+
     setShowCookieBanner(false);
+
+    toggleModal();
   };
 
   const toggleModal = () => {
@@ -64,16 +78,16 @@ const CookieBanner = () => {
         </p>
         <div className="flex space-x-4 items-center justify-center">
           <button
-            className="px-4 py-2 bg-headerGreen text-white rounded-xl text-sm"
+            className="px-4 py-2 bg-dotGreen text-white rounded-xl text-sm"
             onClick={handleAccept}
           >
-            Souhlasím
+            Povolit všechny
           </button>
           <button
             className="px-4 py-2 bg-black/40 text-white rounded-xl text-sm"
             onClick={handleDecline}
           >
-            Nesouhlasím
+            Odmítnout
           </button>
         </div>
         <div className="flex items-center justify-center pt-2">
@@ -97,8 +111,8 @@ const CookieBanner = () => {
                     type="checkbox"
                     id="technicalCheckbox"
                     name="technicalCheckbox"
-                    checked={technicalChecked}
-                    onChange={() => setTechnicalChecked(!technicalChecked)}
+                    checked
+                    disabled
                   />
                   <label
                     htmlFor="scales "

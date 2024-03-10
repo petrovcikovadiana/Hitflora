@@ -2,7 +2,7 @@ const categoriesData = [
   {
     name: "Rostliny",
     icon: `${process.env.PUBLIC_URL}/assets/svg/plants.svg`,
-    img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
+    img: `${process.env.PUBLIC_URL}/assets/avif/sale.avif`,
     content: [
       "trvalky",
       "letničky",

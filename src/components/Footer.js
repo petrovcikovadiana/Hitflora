@@ -4,6 +4,7 @@ import { SlSocialInstagram, SlLocationPin } from "react-icons/sl";
 import { GoMail } from "react-icons/go";
 import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import CookieBanner from "./CookieBanner";
 
 function Footer() {
   return (
@@ -71,10 +72,10 @@ function Footer() {
                 <SlSocialFacebook className="w-7 h-7 text-headerGreen" />
               </a>
             </div>
+            <div>
+              <button>Nastavení cookies</button>
+            </div>
           </div>
-        </div>
-        <div>
-          <button>Nastavení cookies</button>
         </div>
       </div>
 

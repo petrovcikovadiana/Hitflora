@@ -16,8 +16,8 @@ const Navbar = () => {
     { path: "/", label: "Domů" },
     { path: "/aktualne", label: "Aktuálně" },
     { path: "/sortiment", label: "Sortiment" },
-    { path: "/nase_sluzby", label: "Naše služby", isAnchor: true },
-    { path: "/o_nas", label: "O nás", isAnchor: true },
+    { path: "/nase-sluzby", label: "Naše služby", isAnchor: true },
+    { path: "/o-nas", label: "O nás", isAnchor: true },
     { path: "/kontakt", label: "Kontakt" },
   ];
 
