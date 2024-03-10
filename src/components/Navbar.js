@@ -23,9 +23,19 @@ const Navbar = () => {
 
   useEffect(() => {
     // Function to determine and set fill color and icon based on the current time
-    const setColorAndIconBasedOnTime = () => {
+    const setColorAndIconBasedOnTimeAndDay = () => {
       const currentHour = new Date().getHours();
-      if (currentHour >= 7 && currentHour < 16) {
+      const currentDate = new Date();
+      const currentDay = currentDate.getDay();
+
+      if (currentDay === 0) {
+        // Sunday: Set to red
+        setFillColor("#CC0000");
+        setPhoneIcon(
+          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: fillColor }} />
+        );
+      } else if (currentHour >= 7 && currentHour < 16) {
+        // Weekdays (Monday to Saturday): Set to green
         setFillColor("#90CA3E");
         setPhoneIcon(
           <LiaPhoneVolumeSolid
@@ -34,6 +44,7 @@ const Navbar = () => {
           />
         );
       } else {
+        // Weekdays (Monday to Saturday): Set to red
         setFillColor("#CC0000");
         setPhoneIcon(
           <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: fillColor }} />
@@ -42,10 +53,10 @@ const Navbar = () => {
     };
 
     // Initial call to set fill color and icon
-    setColorAndIconBasedOnTime();
+    setColorAndIconBasedOnTimeAndDay();
 
     // Set up an interval to update the fill color and icon every minute (or adjust as needed)
-    const intervalId = setInterval(setColorAndIconBasedOnTime, 60000);
+    const intervalId = setInterval(setColorAndIconBasedOnTimeAndDay, 60000);
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
@@ -88,9 +99,9 @@ const Navbar = () => {
             {/* Logo and company name */}
             <Link to="/">
               <img
-                src={process.env.PUBLIC_URL + "/assets/svg/logo-black.svg"}
+                src={process.env.PUBLIC_URL + "/assets/svg/logo-white.svg"}
                 alt="logo"
-                className="text-white h-24 w-24"
+                className="text-white w-24"
                 loading="lazy"
               />
             </Link>

@@ -42,16 +42,18 @@ const CookieBanner = () => {
   };
 
   const handleEdit = () => {
+    Cookies.set("technicalConsent", "true", { expires: 7, path: "/" });
+
     if (analyticsChecked) {
       Cookies.set("analyticsConsent", "true", { expires: 7, path: "/" });
-    }
-
-    if (technicalChecked) {
-      Cookies.set("technicalConsent", "true", { expires: 7, path: "/" });
+    } else {
+      Cookies.set("analyticsConsent", "false", { expires: 7, path: "/" });
     }
 
     if (marketingChecked) {
       Cookies.set("marketingConsent", "true", { expires: 7, path: "/" });
+    } else {
+      Cookies.set("marketingConsent", "false", { expires: 7, path: "/" });
     }
 
     setShowCookieBanner(false);

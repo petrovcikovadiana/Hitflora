@@ -1,10 +1,10 @@
 import React from "react";
-import { SlSocialFacebook } from "react-icons/sl";
-import { SlSocialInstagram, SlLocationPin } from "react-icons/sl";
+import { SlLocationPin, SlSocialFacebook } from "react-icons/sl";
+import { LuInstagram } from "react-icons/lu";
+
 import { GoMail } from "react-icons/go";
 import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import CookieBanner from "./CookieBanner";
 
 function Footer() {
   return (
@@ -17,9 +17,9 @@ function Footer() {
             {" "}
             <Link to="/">
               <img
-                src={process.env.PUBLIC_URL + "/assets/svg/logo-white.svg"}
+                src={process.env.PUBLIC_URL + "/assets/svg/logo-black.svg"}
                 alt="logo"
-                className="text-white h-24 w-24"
+                className="text-white w-24"
                 loading="lazy"
               />
               {/* Use appropriate styling for your logo */}
@@ -63,7 +63,7 @@ function Footer() {
             <p>Sledujte nás na sociálních sítích</p>
             <div className="flex flex-row items-center gap-2 pt-3 justify-center">
               {" "}
-              <SlSocialInstagram className="w-6 h-6 text-headerGreen" />
+              <LuInstagram className="w-6 h-6 text-headerGreen" />
               <a
                 href="https://www.facebook.com/Zahradnictv%C3%AD-Hit-Flora-105259054403271/"
                 target="_blank"
@@ -72,7 +72,7 @@ function Footer() {
                 <SlSocialFacebook className="w-7 h-7 text-headerGreen" />
               </a>
             </div>
-            <div>
+            <div className="pt-3">
               <button>Nastavení cookies</button>
             </div>
           </div>

@@ -135,7 +135,9 @@ function Home() {
           ) : (
             <div className="w-14 h-14" />
           )}
-          <h3 className="text-darkGreen">{categoriesData[0].name}</h3>
+          <h3 className="text-darkGreen capitalize">
+            {categoriesData[0].name}
+          </h3>
         </Link>
         <Link to={`/sortiment/${categoriesData[1].name}`} className="circle">
           {categoriesData[1].icon ? (
@@ -148,7 +150,9 @@ function Home() {
           ) : (
             <div className="w-14 h-14" />
           )}
-          <h3 className="text-darkGreen">{categoriesData[1].name}</h3>
+          <h3 className="text-darkGreen capitalize">
+            {categoriesData[1].name}
+          </h3>
         </Link>
         <Link to={`/sortiment/${categoriesData[2].name}`} className="circle">
           {categoriesData[2].icon ? (
@@ -161,7 +165,9 @@ function Home() {
           ) : (
             <div className="w-14 h-14" />
           )}
-          <h3 className="text-darkGreen">{categoriesData[2].name}</h3>
+          <h3 className="text-darkGreen capitalize">
+            {categoriesData[2].name}
+          </h3>
         </Link>
         <Link to={`/sortiment/${categoriesData[3].name}`} className="circle">
           {categoriesData[3].icon ? (
@@ -174,7 +180,9 @@ function Home() {
           ) : (
             <div className="w-14 h-14" />
           )}
-          <h3 className="text-darkGreen">{categoriesData[3].name}</h3>
+          <h2 className="text-darkGreen capitalize">
+            {categoriesData[3].name}
+          </h2>
         </Link>
         <Link to={`/sortiment/${categoriesData[4].name}`} className="circle">
           {categoriesData[4].icon ? (
@@ -187,7 +195,9 @@ function Home() {
           ) : (
             <div className="w-14 h-14" />
           )}
-          <h3 className="text-darkGreen">{categoriesData[4].name}</h3>
+          <h3 className="text-darkGreen capitalize">
+            {categoriesData[4].name}
+          </h3>
         </Link>
       </div>
       {/* circles end */}
@@ -196,11 +206,11 @@ function Home() {
       {/* services start */}
       <div className=" w-full h-full bg-white max-w-[1440px] mx-auto">
         {/* title */}
-        <div className="flex flex-col md:px-72 xl:items-start  items-center mx-3 pt-6 ">
-          <h3 className="font-bold text-xl uppercase md:text-start text-center">
+        <div className="flex flex-col md:px-72 xl:items-start md:ml-7 items-center mx-3 pt-6 ">
+          <h2 className="font-bold text-xl uppercase md:text-start text-center">
             V našem zahradnictví{" "}
             <span className="text-headerGreen">nabízíme</span>
-          </h3>
+          </h2>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
@@ -228,11 +238,11 @@ function Home() {
         {/* Cards end */}
       </div>
       {/* Services end */} {/* About start */}
-      <div className="flex md:flex-row flex-col md:gap-24 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-32">
-        <div className="flex flex-col md:ml-4  items-center md:items-start">
-          <h3 className="text-bold text-xl uppercase font-bold ">
+      <div className="flex md:flex-row flex-col md:gap-24 md:items-center  py-10  max-w-screen-xl mx-auto md:px-8 lg:px-16 xl:px-48">
+        <div className="flex flex-col  items-center md:items-start">
+          <h2 className="text-bold text-xl uppercase font-bold ">
             O našem <span className="text-headerGreen">zahradnictví</span>
-          </h3>
+          </h2>
           {/* horizontal rule */}
           <hr class="h-px w-20 md:w-44 my-4 bg-lineGrey border-0 " />
         </div>
@@ -246,7 +256,7 @@ function Home() {
       </div>
       {/* About end */}
       {/* Two images in row start*/}
-      <div className="md:flex hidden flex-row gap-20 px-64 mx-3 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
+      <div className="md:flex hidden flex-row gap-16 px-64 md:items-center mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-48">
         <img
           src={process.env.PUBLIC_URL + "/assets/avif/water.avif"}
           alt="sklenik"
@@ -262,13 +272,13 @@ function Home() {
       </div>
       {/* two images in row end*/}
       {/* services and sale start */}
-      <div className="flex md:flex-row flex-col md:pt-10 items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-32">
+      <div className="flex md:flex-row flex-col md:pt-10 items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-8 lg:px-16 xl:px-48">
         {/* left container */}
-        <div className="flex flex-col lg:pl-0 md:ml-3 ">
-          <h3 className="text-bold text-xl uppercase font-bold">naše služby</h3>
-          <h3 className="text-bold text-xl uppercase font-bold text-headerGreen">
+        <div className="flex flex-col lg:pl-0 ">
+          <h2 className="text-bold text-xl uppercase font-bold">naše služby</h2>
+          <h2 className="text-bold text-xl uppercase font-bold text-headerGreen">
             prodej
-          </h3>
+          </h2>
           <h3 className="text-bold text-xl uppercase font-bold">a realizace</h3>
           {/* horizontal rule */}
           <hr class="h-px w-44 my-4 bg-lineGrey border-0 " />

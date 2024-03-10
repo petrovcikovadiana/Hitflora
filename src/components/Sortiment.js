@@ -36,7 +36,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[0].name}
                 </p>
               </div>
@@ -51,7 +51,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[1].name}
                 </p>
               </div>
@@ -66,7 +66,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[2].name}
                 </p>
               </div>
@@ -81,7 +81,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[3].name}
                 </p>
               </div>
@@ -96,7 +96,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[4].name}
                 </p>
               </div>
@@ -111,7 +111,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[4].name}
                 </p>
               </div>
@@ -126,7 +126,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[4].name}
                 </p>
               </div>
@@ -141,7 +141,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[4].name}
                 </p>
               </div>
@@ -156,7 +156,7 @@ function Sortiment() {
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="greenBoxs">
-                <p className=" text-white text-md  text-center font-medium">
+                <p className=" text-white text-md capitalize text-center font-medium">
                   {categoriesData[4].name}
                 </p>
               </div>

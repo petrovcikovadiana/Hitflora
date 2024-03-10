@@ -1,6 +1,6 @@
 const categoriesData = [
   {
-    name: "Rostliny",
+    name: "rostliny",
     icon: `${process.env.PUBLIC_URL}/assets/svg/plants.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/sale.avif`,
     content: [
@@ -45,7 +45,7 @@ const categoriesData = [
     ],
   },
   {
-    name: "Substráty",
+    name: "substráty",
     icon: `${process.env.PUBLIC_URL}/assets/svg/fertilizers.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
     content: [
@@ -66,7 +66,7 @@ const categoriesData = [
     ],
   },
   {
-    name: "Hnojiva",
+    name: "hnojiva",
     icon: `${process.env.PUBLIC_URL}/assets/svg/substrates.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
 
@@ -84,7 +84,7 @@ const categoriesData = [
     ],
   },
   {
-    name: "Postřiky",
+    name: "postřiky",
     icon: `${process.env.PUBLIC_URL}/assets/svg/sprays.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/water.avif`,
 
@@ -102,7 +102,7 @@ const categoriesData = [
     ],
   },
   {
-    name: "Truhlíky",
+    name: "truhlíky",
     icon: `${process.env.PUBLIC_URL}/assets/svg/planters.svg`,
     img: `${process.env.PUBLIC_URL}/avif/assets/water.avif`,
 

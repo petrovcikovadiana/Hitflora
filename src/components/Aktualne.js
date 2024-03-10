@@ -41,12 +41,12 @@ function Aktualne() {
       <div className="min-h-screen flex ">
         <div className=" w-full max-w-[1440px] mx-auto ">
           <div className=" pt-24 xl:px-80 xl:items-start xl:text-start text-center items-center ">
-            <h2 className="font-bold text-black uppercase text-2xl">
+            <h1 className="font-bold text-black uppercase text-2xl">
               Aktuálně
-            </h2>
-            <h2 className="font-bold text-headerGreen uppercase text-2xl">
+            </h1>
+            <h1 className="font-bold text-headerGreen uppercase text-2xl">
               u nás
-            </h2>
+            </h1>
             {/* Hr */}
             <hr class="h-px w-24 my-4 bg-lineGrey border-0 opacity-100 mx-auto xl:mx-0" />
           </div>

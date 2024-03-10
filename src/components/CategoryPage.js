@@ -38,11 +38,11 @@ const CategoryPage = () => {
           </div>
           <hr className="h-px w-32 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
         </div>
-        <div className="flex md:flex-row mx-auto flex-col gap-10 pb-5">
+        <div className="flex md:flex-row mx-auto flex-col gap-24 pb-5">
           <img
             src={category?.img}
             alt={categoryName}
-            className="hidden md:block rounded-xl md:w-80 md:h-56 w-48 h-40 object-cover"
+            className="hidden md:block rounded-xl md:w-80 md:h-64 w-48 h-40 object-cover"
             loading="lazy"
           />
           <ul>
