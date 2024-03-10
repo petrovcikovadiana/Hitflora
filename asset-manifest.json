@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Hitflora/static/css/main.cff8ee3b.css",
-    "main.js": "/Hitflora/static/js/main.079ad9dc.js",
+    "main.css": "/Hitflora/static/css/main.d2549d88.css",
+    "main.js": "/Hitflora/static/js/main.c63943c5.js",
     "static/js/453.0bbec879.chunk.js": "/Hitflora/static/js/453.0bbec879.chunk.js",
     "index.html": "/Hitflora/index.html",
-    "main.cff8ee3b.css.map": "/Hitflora/static/css/main.cff8ee3b.css.map",
-    "main.079ad9dc.js.map": "/Hitflora/static/js/main.079ad9dc.js.map",
+    "main.d2549d88.css.map": "/Hitflora/static/css/main.d2549d88.css.map",
+    "main.c63943c5.js.map": "/Hitflora/static/js/main.c63943c5.js.map",
     "453.0bbec879.chunk.js.map": "/Hitflora/static/js/453.0bbec879.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cff8ee3b.css",
-    "static/js/main.079ad9dc.js"
+    "static/css/main.d2549d88.css",
+    "static/js/main.c63943c5.js"
   ]
 }
