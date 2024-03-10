@@ -31,7 +31,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <div>
-      <Router basename="/Hitflora">
+      <Router basename="/">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
