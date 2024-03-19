@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-y: scroll;
+}
+
 .main {
   border-radius: 65% 35% 50% 50% / 41% 68% 32% 59%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -40,7 +44,8 @@ body.active-modal {
   right: 0;
   bottom: 0;
   position: fixed;
-  overflow-y: auto;
+  overflow: auto;
+  z-index: 999;
 }
 
 .overlay {
@@ -57,7 +62,8 @@ body.active-modal {
   border-radius: 3px;
   max-width: 600px;
   min-width: 300px;
-  overflow-y: auto;
+  overflow: auto;
+  z-index: 999;
 }
 
 .close-modal {
