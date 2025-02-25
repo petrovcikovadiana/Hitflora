@@ -6,7 +6,7 @@ https://hitflora.cz/
 ---
 
 ## 🌟 **Features**
-✅ **Custom CMS Integration** – Clients can create, edit, and delete posts  
+✅ **Integration to the Custom CMS** – Clients can create, edit, and delete posts  
 ✅ **Dynamic Opening Hours** – Easily update store hours via CMS  
 ✅ **Fully Responsive Design** – Optimized for all devices (desktop, tablet, mobile)  
 ✅ **Modern UI/UX** – Clean and professional design using **Tailwind CSS**  
