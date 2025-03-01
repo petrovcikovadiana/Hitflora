@@ -5,7 +5,6 @@ import Footer from "../Footer";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 
-import { IoCloseOutline } from "react-icons/io5";
 import OpeningHours from "./OpeningHours";
 import ServiceCards from "./ServiceCards";
 import Hero from "./Hero";
@@ -14,37 +13,6 @@ import Circles from "./Circles";
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import AboutImages from "./AboutImages";
-
-const items = [
-  { text: "Nabízíme široký sortiment rostlin i doplňkového zboží" },
-  { text: "Poradíme Vám s výběrem rostlin a veškerého zboží" },
-  { text: "Po vzájemné dohodě Vám vybrané zboží doručíme" },
-  { text: "Osázíme Vám truhlíky a nádoby (keramiku, mísy apod.)" },
-];
-
-const cards = [
-  {
-    src: "/assets/avif/zahrada.avif",
-    alt: "sortiment",
-    text: "Široký sortiment rostlin",
-  },
-  {
-    src: "/assets/avif/vysadby.avif",
-    alt: "dekorace",
-    text: "Realizace sadových úprav",
-  },
-  { src: "/assets/avif/zelen.avif", alt: "flowers", text: "Údržba zeleně" },
-  {
-    src: "/assets/avif/yard.avif",
-    alt: "projekty",
-    text: "Projekty zahrad",
-  },
-  {
-    src: "/assets/avif/main-horse.avif",
-    alt: "minizoo",
-    text: "Dětský koutek a mini ZOO",
-  },
-];
 
 function Home() {
   const [hours, setHours] = useState([]);
@@ -170,21 +138,9 @@ function Home() {
       {/* circles  */}
       <Circles />
 
-      {/* services start */}
-      <div className=" w-full h-full bg-white max-w-[1440px] mx-auto">
-        {/* title */}
-        <div className="flex flex-col md:items-start xl:px-72 lg:ml-16 md:ml-10 xl:ml-6 items-center mx-3 pt-6 ">
-          <h2 className="font-bold text-xl uppercase md:text-start text-center">
-            V našem zahradnictví{" "}
-            <span className="text-headerGreen">nabízíme</span>
-          </h2>
-          {/* horizontal rule */}
-          <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
-        </div>
-        {/* cards  */}
-        <ServiceCards cards={cards} />
-      </div>
-      {/* Services end */}
+      {/* services  */}
+      <ServiceCards />
+
       {/* About  */}
       <AboutSection />
 
@@ -192,7 +148,7 @@ function Home() {
       <AboutImages />
 
       {/* services and sale */}
-      <ServicesSection items={items} />
+      <ServicesSection />
 
       {/* opening hours */}
       <OpeningHours hours={hours} />
