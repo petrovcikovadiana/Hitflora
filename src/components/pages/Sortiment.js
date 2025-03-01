@@ -3,12 +3,22 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import categoriesData from "../data/categoriesData";
+import { Helmet } from "react-helmet";
 
 import { Link } from "react-router-dom";
 
 function Sortiment() {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://hitflora.cz/sortiment" />
+        <meta name="robots" content="index, follow" />
+        <title>Sortiment</title>
+        <meta
+          name="description"
+          content="Objevte široký sortiment okrasných rostlin i doplňkového zboží. Nabízíme špičkové produkty pro vaši zahradu - od trvalek až po ovocné stromky."
+        />
+      </Helmet>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         {/* hero start */}
@@ -36,7 +46,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md capitalize text-center font-medium">
-                    {categoriesData[0].name}
+                    {categoriesData[0].URLname}
                   </p>
                 </div>
               </div>
@@ -51,7 +61,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md capitalize text-center font-medium">
-                    {categoriesData[1].name}
+                    {categoriesData[1].URLname}
                   </p>
                 </div>
               </div>
@@ -66,7 +76,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md capitalize text-center font-medium">
-                    {categoriesData[2].name}
+                    {categoriesData[2].URLname}
                   </p>
                 </div>
               </div>
@@ -81,7 +91,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md capitalize text-center font-medium">
-                    {categoriesData[3].name}
+                    {categoriesData[3].URLname}
                   </p>
                 </div>
               </div>
@@ -96,7 +106,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md capitalize text-center font-medium">
-                    {categoriesData[4].name}
+                    {categoriesData[4].URLname}
                   </p>
                 </div>
               </div>
@@ -111,7 +121,7 @@ function Sortiment() {
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="greenBoxs">
                   <p className=" text-white text-md text-center font-medium">
-                    {categoriesData[5].name}
+                    {categoriesData[5].URLname}
                   </p>
                 </div>
               </div>

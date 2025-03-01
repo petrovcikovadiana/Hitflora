@@ -1,10 +1,20 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 function About() {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://hitflora.cz/o-nas" />
+        <meta name="robots" content="index, follow" />
+        <title>O nás</title>
+        <meta
+          name="description"
+          content="Zůstaňte v obraze s našimi aktuálními událostmi, novinkami a speciálními nabídkami v našem zahradnictví."
+        />
+      </Helmet>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
@@ -14,7 +24,6 @@ function About() {
               <h1 className="text-headerGreen text-2xl uppercase font-bold">
                 zahradnictví
               </h1>
-              {/* horizontal rule */}
               <hr class="h-px w-20 md:w-44 mt-4 bg-lineGrey border-0 " />
             </div>
             <div className="md:w-[450px] pt-10 md:pt-0">

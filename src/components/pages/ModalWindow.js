@@ -1,5 +1,5 @@
-import React from "react"; // Importování Reactu pro použití JSX
-import { AiOutlineCloseCircle } from "react-icons/ai"; // Importování ikony z knihovny react-icons/ai
+import React from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 // Komponenta pro modální okno pro úpravu nastavení cookies
 const ModalWindow = ({
@@ -23,11 +23,9 @@ const ModalWindow = ({
           {/* Obsah modálního okna */}
           <h4 className="text-center text-md pb-4 text-slate-700 font-bold">
             {" "}
-            {/* Nadpis */}
             Přizpůsobte si zde své nastavení cookies{" "}
           </h4>
           <hr className="w-64 my-1  mx-auto bg-gray-100 border-1 " />{" "}
-          {/* Oddělovač */}
           {/* Checkbox a popisek pro technické cookies */}
           <div className="my-5 ">
             <input
@@ -103,21 +101,18 @@ const ModalWindow = ({
             souhlas s jejich použitím, nebude Vám zobrazován obsah ani reklamy
             přizpůsobené Vašim zájmům.
           </p>
-          {/* Tlačítko pro uložení změn */}
           <button
             onClick={() => {
-              handleEdit(); // Zavolat funkci pro úpravu nastavení cookies
-              toggleModal(); // Zavřít modální okno
+              handleEdit();
+              toggleModal();
               window.location.reload();
             }}
             className="bg-headerGreen px-4 rounded-xl w-32 h-[40px] mb-5 text-white "
           >
             Uložit
           </button>
-          {/* Tlačítko pro zavření modálního okna */}
           <button className="close-modal text-gray-500" onClick={toggleModal}>
             <AiOutlineCloseCircle className="w-6 h-6" />{" "}
-            {/* Ikona křížku pro zavření */}
           </button>
         </div>
       </div>
@@ -125,4 +120,4 @@ const ModalWindow = ({
   );
 };
 
-export default ModalWindow; // Exportování komponenty ModalWindow
+export default ModalWindow;

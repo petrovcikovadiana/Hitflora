@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2 kvě 2024",
+    "title": "Změna otevírací doby!",
+    "description": ["Nově máme otevřeno i v neděli 7:00 - 13:00"],
+    "alt": "nedele",
+    "image": "/assets/avif/nedele.avif"
+  },
+  {
+    "date": "29 dub 2024",
+    "title": "Stánek s občerstvením",
+    "description": [
+      "Využijte možnost občerstvit se v našem stánku u cyklostezky"
+    ],
+    "alt": "stanek",
+    "image": "/assets/avif/stanek.avif"
+  },
+  {
+    "date": "29 dub 2024",
+    "title": "Máme nový výběr bylinek",
+    "description": ["Výběr z mnoha druhů"],
+    "alt": "bylinky",
+    "image": "/assets/avif/bylinky.avif"
+  },
+  {
+    "date": "29 dub 2024",
+    "title": "Otevírací doba během květnových svátků",
+    "description": ["1. května - 7:00 - 13:00 ", "8. května - ZAVŘENO"],
+    "alt": "oteviraci",
+    "image": "/assets/avif/oteviraci.avif"
+  },
+  {
+    "date": "23 dub 2024",
+    "title": "Zahajujeme prodej letniček!",
+    "description": ["Máme největší výběr v širokém okolí za příznivé ceny   "],
+    "alt": "letnicky",
+    "image": "/assets/avif/letnicky-new.avif"
+  },
+  {
+    "date": "5 dub 2024",
+    "title": "Nový přírůstek naší stáje: Hříbátko",
+    "description": [
+      "Dnes se do naší stáje připojil nový člen, a je to velký důvod k radosti!   "
+    ],
+    "alt": "alnich",
+    "image": "/assets/avif/alnich.avif"
+  },
+  {
+    "date": "25 bře 2024",
+    "title": "Nové rostliny pro vás",
+    "description": [
+      "Ve sklenících sázíme široký sortiment letniček a také jsme dovezli nové zajímavé rostliny"
+    ],
+    "alt": "stromky",
+    "image": "/assets/avif/letnicky-aktualne.avif"
+  }
+]

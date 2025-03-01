@@ -29,6 +29,9 @@ module.exports = {
         logoRed: "#CC0000",
         boxGreen: "#102719",
         navbarGreen: "#0C2009",
+        darkGrey: "#2b2b2b",
+        lightBlack: "#121212",
+        textBlue: "#099bf9",
       },
       backgroundImage: {
         site: "url('./assets/site-bg.jpg')",

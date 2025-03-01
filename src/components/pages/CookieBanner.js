@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie"; // Importovat modul pro práci s cookies
-import { AiOutlineCloseCircle } from "react-icons/ai"; // Importovat ikonu z React Icons
+import Cookies from "js-cookie";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import ReactGA from "react-ga";
 
 const CookieBanner = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(false);
   const [modal, setModal] = useState(false); // Stav modálního okna
   const [analyticsChecked, setAnalyticsChecked] = useState(false); // Stav souhlasu s analytickými cookies
-  const [technicalChecked, setTechnicalChecked] = useState(false); // Stav souhlasu s technickými cookies
-  const [marketingChecked, setMarketingChecked] = useState(false); // Stav souhlasu s marketingovými cookies
+  const [technicalChecked, setTechnicalChecked] = useState(false);
+  const [marketingChecked, setMarketingChecked] = useState(false);
 
   // Efekt pro načtení stavů cookies při prvním renderu
   useEffect(() => {
     const analyticsConsent = Cookies.get("analyticsConsent") === "true"; // Zjistit stav souhlasu s analytickými cookies
-    const technicalConsent = Cookies.get("technicalConsent") === "true"; // Zjistit stav souhlasu s technickými cookies
-    const marketingConsent = Cookies.get("marketingConsent") === "true"; // Zjistit stav souhlasu s marketingovými cookies
+    const technicalConsent = Cookies.get("technicalConsent") === "true";
+    const marketingConsent = Cookies.get("marketingConsent") === "true";
     setShowCookieBanner(true);
     // Aktualizovat stavy checkboxů podle stavů cookies
     setAnalyticsChecked(analyticsConsent);
@@ -24,45 +25,49 @@ const CookieBanner = () => {
     const allConsentsGiven =
       analyticsConsent || technicalConsent || marketingConsent;
     if (allConsentsGiven) {
-      setShowCookieBanner(false); // Skrýt banner, pokud uživatel udělil souhlas se všemi cookies
+      setShowCookieBanner(false);
     }
   }, []);
 
   // Funkce pro přijetí cookies
   const handleAccept = () => {
     Cookies.set("analyticsConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s cookies
-    Cookies.set("marketingConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s cookies
-    Cookies.set("technicalConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s cookies
+    Cookies.set("marketingConsent", "true", { expires: 365, path: "/" });
+    Cookies.set("technicalConsent", "true", { expires: 365, path: "/" });
+
     setAnalyticsChecked(true);
 
     // Nastavit souhlas s analytickými cookies na true
-    setShowCookieBanner(false); // Skrýt banner
+    setShowCookieBanner(false);
+
     window.location.reload();
+    ReactGA.initialize("G-M7154RCSE3"); // Nahrazení ID vaším vlastním identifikátorem sledování
+    ReactGA.pageview(window.location.pathname);
   };
 
   // Funkce pro odmítnutí cookies
   const handleDecline = () => {
     Cookies.set("analyticsConsent", "false", { expires: 7, path: "/" }); // Nastavit nesouhlas s cookies
-    Cookies.set("technicalConsent", "true", { expires: 365, path: "/" }); // Nastavit nesouhlas s cookies
-    Cookies.set("marketingConsent", "false", { expires: 7, path: "/" }); // Nastavit nesouhlas s cookies
-    setShowCookieBanner(false); // Skrýt banner
+    Cookies.set("technicalConsent", "true", { expires: 365, path: "/" });
+    Cookies.set("marketingConsent", "false", { expires: 7, path: "/" });
+    setShowCookieBanner(false);
     window.location.reload();
   };
   // Funkce pro editaci cookies
   const handleEdit = () => {
     Cookies.set("technicalConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s technickými cookies
     if (analyticsChecked) {
-      Cookies.set("analyticsConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s analytickými cookies
+      Cookies.set("analyticsConsent", "true", { expires: 365, path: "/" });
     } else {
-      Cookies.set("analyticsConsent", "false", { expires: 7, path: "/" }); // Nastavit nesouhlas s analytickými cookies
+      Cookies.set("analyticsConsent", "false", { expires: 7, path: "/" });
     }
     if (marketingChecked) {
-      Cookies.set("marketingConsent", "true", { expires: 365, path: "/" }); // Nastavit souhlas s marketingovými cookies
+      Cookies.set("marketingConsent", "true", { expires: 365, path: "/" });
     } else {
-      Cookies.set("marketingConsent", "false", { expires: 7, path: "/" }); // Nastavit nesouhlas s marketingovými cookies
+      Cookies.set("marketingConsent", "false", { expires: 7, path: "/" });
     }
-    setShowCookieBanner(false); // Skrýt banner
-    toggleModal(); // Přepnout modální okno
+    setShowCookieBanner(false);
+    toggleModal();
     window.location.reload();
   };
   // Funkce pro přepínání modálního okna

@@ -2,25 +2,32 @@ import React from "react";
 import Footer from "./Footer";
 import MapComponent from "./MapComponent";
 import Navbar from "./Navbar";
+import { Helmet } from "react-helmet";
 
 function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Získání hodnot z formuláře
     const formData = new FormData(e.target);
     const name = formData.get("name");
     const email = formData.get("email");
     const message = formData.get("message");
 
-    // Vytvoření mailto odkazu
     const mailtoLink = `mailto:hitflora@hitflora.cz?subject=Nová%20zpráva&body=Jméno:%20${name}%0DE-mail:%20${email}%0DZpráva:%20${message}`;
 
-    // Otevření e-mailového klienta
     window.location.href = mailtoLink;
   };
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://hitflora.cz/kontakt" />
+        <meta name="robots" content="index, follow" />
+        <title>Kontakt</title>
+        <meta
+          name="description"
+          content="Kontaktujte nás. Na veškeré Vaše dotazy Vám zodpovíme na e-mailu: hitflora@hitflora.cz nebo volejte 412 517 027."
+        />
+      </Helmet>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         {/* contact form start */}
@@ -30,7 +37,6 @@ function Contact() {
               V případě dotazů nás kontaktujte, rádi Vám{" "}
               <span className="text-headerGreen">poradíme</span>
             </h1>
-            {/* horizontal rule */}
             <hr class="h-px w-44 my-4 bg-lineGrey border-0 mx-auto md:mx-0" />
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 my-12 xxl:pb-20 md:my-10 px-4 xl:px-80 max-w-[1440px] mx-auto">
@@ -100,7 +106,6 @@ function Contact() {
             <MapComponent />
           </div>
         </div>
-
         <Footer />
       </div>
     </>

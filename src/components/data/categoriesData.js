@@ -1,6 +1,8 @@
 const categoriesData = [
   {
     name: "rostliny",
+    URLname: "rostliny",
+
     icon: `${process.env.PUBLIC_URL}/assets/svg/plants.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/rostliny.avif`,
     content: [
@@ -46,7 +48,9 @@ const categoriesData = [
     ],
   },
   {
-    name: "substráty",
+    name: "substraty",
+    URLname: "substráty",
+
     icon: `${process.env.PUBLIC_URL}/assets/svg/fertilizers.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/substraty.avif`,
     content: [
@@ -66,6 +70,8 @@ const categoriesData = [
   },
   {
     name: "hnojiva",
+    URLname: "hnojiva",
+
     icon: `${process.env.PUBLIC_URL}/assets/svg/substrates.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/hnojiva.avif`,
 
@@ -87,7 +93,9 @@ const categoriesData = [
     ],
   },
   {
-    name: "postřiky",
+    name: "postriky",
+    URLname: "postřiky",
+
     icon: `${process.env.PUBLIC_URL}/assets/svg/sprays.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/postriky.avif`,
 
@@ -105,7 +113,8 @@ const categoriesData = [
     ],
   },
   {
-    name: "truhlíky",
+    name: "truhliky",
+    URLname: "truhlíky",
     icon: `${process.env.PUBLIC_URL}/assets/svg/planters.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/truhliky.avif`,
 
@@ -119,7 +128,9 @@ const categoriesData = [
     ],
   },
   {
-    name: "Mulčovací kůra a štěpky",
+    name: "Mulcovaci kura a stepky",
+    URLname: "Mulčovací kůra a štěpky",
+
     icon: `${process.env.PUBLIC_URL}/assets/svg/planters.svg`,
     img: `${process.env.PUBLIC_URL}/assets/avif/mulcovaci.avif`,
 
