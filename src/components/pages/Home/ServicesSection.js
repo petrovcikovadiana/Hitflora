@@ -1,6 +1,7 @@
 import React from "react";
+import items from "../../data/items";
 
-function ServicesSection({ items }) {
+function ServicesSection() {
   return (
     <div className="flex md:flex-row flex-col md:pt-10 items-center md:items-start md:text-start text-center z-10 mx-auto  max-w-screen-xl  md:px-16 lg:px-24 xl:px-48">
       {/* left container */}
