@@ -1,10 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.hitflora.cz/</loc>
-    <!-- Přidejte další informace, např. datum změny, frekvenci aktualizace, prioritu, podle potřeby -->
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Přidejte další url pro každou stránku na vašem webu -->
+<url>
+<loc>https://hitflora.cz/</loc>
+<lastmod>2024-06-16T12:08:51+01:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://hitflora.cz/aktualne</loc>
+<lastmod>2024-03-25T12:08:51+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://hitflora.cz/sortiment</loc>
+<lastmod>2024-03-25T12:08:51+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://hitflora.cz/nase-sluzby</loc>
+<lastmod>2024-03-25T12:08:51+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://hitflora.cz/o-nas</loc>
+<lastmod>2024-03-25T12:08:51+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://hitflora.cz/kontakt</loc>
+<lastmod>2024-03-25T12:08:51+01:00</lastmod>
+<priority>1.0</priority>
+</url>
 </urlset>

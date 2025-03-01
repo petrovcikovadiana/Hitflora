@@ -3,11 +3,20 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Tolgee, DevTools, TolgeeProvider, FormatSimple } from "@tolgee/react";
+
+const tolgee = Tolgee().use(DevTools()).use(FormatSimple()).init({
+  language: "en",
+  apiUrl: process.env.REACT_APP_TOLGEE_API_URL,
+  apiKey: process.env.REACT_APP_TOLGEE_API_KEY,
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <TolgeeProvider tolgee={tolgee}>
+      <App />
+    </TolgeeProvider>
   </React.StrictMode>
 );
 

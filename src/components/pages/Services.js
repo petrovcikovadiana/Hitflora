@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 const cardsData = [
   {
@@ -32,8 +33,16 @@ const cardsData = [
 function Services() {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://hitflora.cz/nase-sluzby" />
+        <meta name="robots" content="index, follow" />
+        <title>Naše služby</title>
+        <meta
+          name="description"
+          content="Zabýváme se sadovnickými úpravami, odborným projektováním zahrad a údržbou zeleně."
+        />
+      </Helmet>
       <Navbar />
-      {/* hero start */}
       <div className=" max-w-[1440px] mx-auto">
         <div className="flex flex-col lg:px-80 xl:text-start w-full mt-24 items-center xl:items-start text-center ">
           <h1 className="text-black text-2xl font-bold uppercase opacity-100">
@@ -47,8 +56,6 @@ function Services() {
           </h1>
           <hr class="h-px w-44 mt-4 bg-lineGrey border-0 " />
         </div>
-
-        {/* hero end */}
       </div>
       <div className="flex flex-wrap gap-8 pt-10 mx-auto max-w-[1440px] items-center justify-center lg:px-44 md:px-0 mb-16">
         {cardsData.map((card, index) => (

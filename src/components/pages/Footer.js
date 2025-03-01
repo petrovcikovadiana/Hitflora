@@ -9,8 +9,41 @@ import { Link } from "react-router-dom";
 
 import ModalWindow from "./ModalWindow";
 import useCookieConsent from "./useCookieConsent";
+import axios from "axios";
 
 function Footer() {
+  const formatPhoneNumber = (number) => {
+    return number.replace(/(\d{3})(?=\d)/g, "$1 ");
+  };
+  //phone numbers API
+  const [contactInfo, setContactInfo] = useState({});
+  useEffect(() => {
+    const fetchContactInfo = async () => {
+      try {
+        const tenantId = "5f62d984506f2792";
+
+        const response = await axios.get(
+          `https://eclipse.cloudylake.io/api/v1/tenants/${tenantId}/configs/key/contactInfo`
+        );
+
+        const data = response.data;
+        if (
+          data &&
+          data.data &&
+          data.data.config &&
+          data.data.config.config_value
+        ) {
+          setContactInfo(data.data.config.config_value);
+        } else {
+          console.error("Unexpected API response structure:", response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching contact info:", error);
+      }
+    };
+
+    fetchContactInfo();
+  }, []);
   const {
     analyticsChecked,
     setAnalyticsChecked,
@@ -61,7 +94,6 @@ function Footer() {
   return (
     <>
       <ScrollToTop />
-      {/* footer start */}
       <div className="w-full md:h-44 bg-circleGreen text-sm mx-auto text-center">
         <div className="flex md:flex-row flex-col md:gap-7 gap-4 items-center justify-center xl:py-5 md:py-3  py-6 ">
           {/* Logo */}
@@ -74,7 +106,6 @@ function Footer() {
                 className="text-white w-28 h-14"
                 loading="lazy"
               />
-              {/* Use appropriate styling for your logo */}
             </Link>
           </div>
           <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center  text-center ">
@@ -108,20 +139,36 @@ function Footer() {
           <div className="text-sm flex md:flex-row flex-col gap-3 items-center justify-center text-center">
             <BsTelephone className="w-7 h-7 text-headerGreen" />
             <div>
-              {" "}
-              <p className="font-bold text-headerGreen">Mobil</p>
-              <p>+420 775 102 189</p>
-              <p className="font-bold text-headerGreen">Prodejna</p>
-              <p>+420 412 517 027</p>
+              {contactInfo.mobileNumber && (
+                <p>
+                  <p className="font-bold text-headerGreen">Mobil</p>
+                  {formatPhoneNumber(contactInfo.mobileNumber.number)}
+                </p>
+              )}
+              {contactInfo.phoneNumber && (
+                <p>
+                  <p className="font-bold text-headerGreen">Prodejna</p>
+                  {formatPhoneNumber(contactInfo.phoneNumber.number)}
+                </p>
+              )}
             </div>
           </div>
           <div className="flex flex-col items-center justify-center text-center">
             <p>Sledujte nás na sociálních sítích</p>
             <div className="flex flex-row items-center gap-2 pt-3 justify-center">
               {" "}
-              <LuInstagram className="w-6 h-6 text-headerGreen" />
+              <a
+                href="https://www.instagram.com/zahradnictvi_hit_flora/"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <LuInstagram className="w-6 h-6 text-headerGreen" />
+              </a>
               <a
                 href="https://www.facebook.com/Zahradnictv%C3%AD-Hit-Flora-105259054403271/"
+                aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -158,13 +205,11 @@ function Footer() {
           </div>
         </div>
         <div className="w-full flex bg-circleGreen">
-          <p className="text-[10px] font-normal  items-center justify-center mx-auto">
-            &copy; 2024 Webgroo. All rights reserved.
+          <p className="text-xs font-normal  items-center justify-center mx-auto">
+            &copy; 2024 CloudyLake.io All rights reserved.
           </p>{" "}
         </div>
       </div>
-
-      {/* footer end */}
     </>
   );
 }

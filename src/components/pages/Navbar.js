@@ -28,32 +28,33 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    // Function to determine and set fill color and icon based on the current time
+    // Function to determine and set fill color and icon based on the current time and day
     const setColorAndIconBasedOnTimeAndDay = () => {
       const currentHour = new Date().getHours();
       const currentDate = new Date();
       const currentDay = currentDate.getDay();
 
       if (currentDay === 0) {
-        // Sunday: Set to red
+        // Neděle
         setFillColor("#CC0000");
+        setTextColor("#CC0000");
         setPhoneIcon(
-          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: fillColor }} />
+          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: "#CC0000" }} />
         );
-      } else if (currentHour >= 7 && currentHour < 16) {
-        // Weekdays (Monday to Saturday): Set to green
+      } else if (currentHour >= 7 && currentHour < 18) {
         setFillColor("#90CA3E");
+        setTextColor("#90CA3E");
         setPhoneIcon(
           <LiaPhoneVolumeSolid
             className="w-5 h-5"
-            style={{ fill: fillColor }}
+            style={{ fill: "#90CA3E" }}
           />
         );
       } else {
-        // Weekdays (Monday to Saturday): Set to red
         setFillColor("#CC0000");
+        setTextColor("#CC0000");
         setPhoneIcon(
-          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: fillColor }} />
+          <LiaPhoneSlashSolid className="w-5 h-5" style={{ fill: "#CC0000" }} />
         );
       }
     };
@@ -66,28 +67,7 @@ const Navbar = () => {
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
-  }, [fillColor]);
-
-  useEffect(() => {
-    // Function to determine and set text color based on the current time
-    const setTextColorBasedOnTime = () => {
-      const currentHour = new Date().getHours();
-      if (currentHour >= 7 && currentHour < 16) {
-        setTextColor("#90CA3E");
-      } else {
-        setTextColor("#CC0000");
-      }
-    };
-
-    // Initial call to set text color
-    setTextColorBasedOnTime();
-
-    // Set up an interval to update the text color every minute (or adjust as needed)
-    const intervalId = setInterval(setTextColorBasedOnTime, 60000);
-
-    // Clear the interval when the component is unmounted
-    return () => clearInterval(intervalId);
-  }, []); // Empty dependency array ensures that the effect runs only once on mount
+  }, []);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -98,7 +78,7 @@ const Navbar = () => {
   return (
     // Nav desktop
     <nav className="bg-navbarGreen text-white fixed top-0 left-0 right-0 z-40 w-full">
-      <div className=" mx-auto px-7">
+      <div className=" mx-auto px-7 xl:px-0">
         <div className="flex justify-between lg:justify-center items-center h-16 space-x-20  ">
           <div className="flex  items-center">
             {" "}
@@ -107,7 +87,7 @@ const Navbar = () => {
               <img
                 src={process.env.PUBLIC_URL + "/assets/svg/logo-white.svg"}
                 alt="logo"
-                className="text-white w-28 h-14"
+                className="text-white md:w-36 h-14"
                 loading="lazy"
               />
             </Link>
@@ -115,18 +95,24 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center">
             {/* Nav list desktop*/}
-            <ul className="hidden lg:flex space-x-4 xl:space-x-6 xl:px-44 items-center">
-              {" "}
+            <ul className="flex space-x-4 xl:space-x-6 xl:px-44 items-center">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.path}>
+                  {link.isAnchor ? (
                     <a
-                      href={link.isAnchor ? link.path : null}
+                      href={link.path}
                       className="text-white hover:text-headerGreen"
                     >
                       {link.label}
                     </a>
-                  </Link>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="text-white hover:text-headerGreen"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -142,6 +128,7 @@ const Navbar = () => {
             {/* Hamburger button mobile  */}
             <button
               onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
               className="text-white p-2 focus:outline-none "
             >
               {mobileMenuOpen ? (
@@ -175,7 +162,14 @@ const Navbar = () => {
             </div>
             <div className="flex flex-row items-center mx-auto gap-2 pt-3 justify-center">
               {" "}
-              <LuInstagram className="w-10 h-10 text-headerGreen" />
+              <a
+                href="https://www.instagram.com/zahradnictvi_hit_flora/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <LuInstagram className="w-10 h-10 text-headerGreen" />
+              </a>
               <a
                 href="https://www.facebook.com/Zahradnictv%C3%AD-Hit-Flora-105259054403271/"
                 target="_blank"
